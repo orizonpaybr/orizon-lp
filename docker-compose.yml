@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: gateway_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: martinspay_app
+      MYSQL_USER: gateway_user
+      MYSQL_PASSWORD: gateway_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./gateway-api/martinspay-app.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - gateway_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: gateway_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    networks:
+      - gateway_network
+
+volumes:
+  mysql_data:
+
+networks:
+  gateway_network:
+    driver: bridge
+

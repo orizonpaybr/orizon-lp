@@ -1,0 +1,90 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Contact forms table
+model ContactForm {
+  id          String   @id @default(cuid())
+  firstName   String
+  lastName    String
+  email       String
+  phone       String
+  company     String
+  website     String?
+  volume      String
+  message     String
+  acceptTerms Boolean
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("contact_forms")
+}
+
+// Complaints/feedback forms table
+model ComplaintForm {
+  id            String   @id @default(cuid())
+  fullName      String
+  cpf           String
+  email         String
+  phone         String
+  complaintType String
+  message       String
+  incidentDate  String?
+  acceptLGPD    Boolean
+  protocol      String   @unique
+  status        String   @default("pending") // pending, in_progress, completed
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relationship with attachments
+  attachments Attachment[]
+
+  @@map("complaint_forms")
+}
+
+// Attachments table for complaint forms
+model Attachment {
+  id          String        @id @default(cuid())
+  fileName    String
+  fileSize    Int // in bytes
+  fileType    String // MIME type
+  filePath    String // File path in storage
+  complaintId String
+  complaint   ComplaintForm @relation(fields: [complaintId], references: [id], onDelete: Cascade)
+  createdAt   DateTime      @default(now())
+
+  @@map("attachments")
+}
+
+// Enum for complaint types
+enum ComplaintType {
+  COMPLAINT
+  SUGGESTION
+  REQUEST
+  DENUNCIATION
+}
+
+// Enum for complaint status
+enum ComplaintStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+}
+
+// Enum for transaction volume
+enum TransactionVolume {
+  UP_TO_10K
+  UP_TO_50K
+  UP_TO_100K
+  UP_TO_500K
+  UP_TO_1M
+  MORE_THAN_1M
+}

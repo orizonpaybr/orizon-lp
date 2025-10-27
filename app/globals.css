@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0C243B;
+  --primary: #007BC7;
+  --primary-hover: #006BA8;
+  --primary-light: #009EE0;
+  --secondary: #009EE0;
+  --secondary-light: #00BFFF;
+  --accent: #FF8A00;
+  --accent-hover: #E67A00;
+  --dark: #0C243B;
+  --dark-alt: #000000;
+  --card: #FFFFFF;
+  --gray-light: #F3F3F3;
+  --gray-lighter: #EBEBEB;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-dark: var(--dark);
+  --color-dark-alt: var(--dark-alt);
+  --color-card: var(--card);
+  --color-gray-light: var(--gray-light);
+  --color-gray-lighter: var(--gray-lighter);
+  --font-sans: var(--font-poppins);
+}
+
+
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+
+p {
+  line-height: 1.7;
+}
+
+.container-center {
+  width: 100% ;
+  max-width: 1280px ;
+  margin-left: auto ;
+  margin-right: auto ;
+  padding-left: 1rem ;
+  padding-right: 1rem ;
+}
+
+/* Prevenir overflow horizontal em elementos animados */
+.motion-container {
+  overflow-x: hidden;
+}
+
+/* Garantir que imagens não causem overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
