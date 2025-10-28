@@ -38,8 +38,8 @@ export default function TermosPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-dark mb-4">2. Definições</h2>
               <p className="text-gray-700 leading-relaxed">
-                "Plataforma" refere-se ao sistema Orizon, incluindo todos os serviços de
-                processamento de pagamentos oferecidos. "Usuário" refere-se a qualquer pessoa ou
+                &quot;Plataforma&quot; refere-se ao sistema Orizon, incluindo todos os serviços de
+                processamento de pagamentos oferecidos. &quot;Usuário&quot; refere-se a qualquer pessoa ou
                 entidade que acessa ou utiliza a plataforma.
               </p>
             </section>
