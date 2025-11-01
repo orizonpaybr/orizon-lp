@@ -34,6 +34,7 @@ export function ContactSection() {
     control,
     formState: { errors },
     reset,
+    trigger,
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
   });
@@ -165,6 +166,21 @@ export function ContactSection() {
                         id="phone"
                         type="tel"
                         placeholder="(11) 99999-9999"
+                        autoComplete="tel"
+                        onAccept={(value) => {
+                          field.onChange(value);
+                          // Trigger validação após atualizar o valor (captura autocomplete também)
+                          setTimeout(() => {
+                            trigger('phone');
+                          }, 0);
+                        }}
+                        onBlur={(e) => {
+                          field.onBlur();
+                          // Força validação ao perder o foco (importante para autocomplete do navegador)
+                          setTimeout(() => {
+                            trigger('phone');
+                          }, 100);
+                        }}
                         className={`
                           w-full px-4 py-3 border rounded-md bg-white
                           focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
