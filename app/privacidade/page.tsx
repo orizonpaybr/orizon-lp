@@ -27,128 +27,52 @@ export default function PrivacidadePage() {
 
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 prose max-w-none">
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-dark mb-4">1. Coleta de Informações</h2>
               <p className="text-gray-700 leading-relaxed">
-                A Orizon coleta informações necessárias para o fornecimento de nossos serviços,
-                incluindo dados pessoais, comerciais e de transações financeiras. Todos os dados
-                são coletados de forma transparente e com o consentimento do usuário.
+                A Orizon Pay compromete-se, por si, seus prepostos e profissionais dedicados à prestação dos serviços, a realizar o tratamento dos dados pessoais a que vier a ter acesso por força deste Contrato (&quot;Dados Pessoais&quot;), sempre em atenção às melhores práticas de mercado, assim como ao disposto na Lei nº 13.709/2018 (&quot;Lei Geral de Proteção de Dados Pessoais&quot; ou &quot;LGPD&quot;), no Marco Civil da Internet e na Política de Privacidade do cliente, respeitadas as finalidades ali descritas, bem como a envidar seus melhores esforços na proteção dos Dados Pessoais, em especial os Dados Pessoais sensíveis.
               </p>
             </section>
 
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-dark mb-4">2. Tipos de Dados Coletados</h2>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Dados cadastrais (nome, CPF/CNPJ, endereço, telefone, e-mail)</li>
-                <li>Dados bancários e financeiros</li>
-                <li>Dados de transações e pagamentos</li>
-                <li>Dados de navegação e uso da plataforma</li>
-                <li>Logs de acesso e informações técnicas</li>
-              </ul>
-            </section>
+            <div className="border-t border-gray-300 my-8"></div>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-dark mb-4">3. Uso das Informações</h2>
+              <h2 className="text-2xl font-bold text-dark mb-6">Compromissos da Orizon Pay</h2>
+              
               <p className="text-gray-700 leading-relaxed mb-4">
-                As informações coletadas são utilizadas para:
+                A Orizon Pay se compromete a:
               </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Processar pagamentos e transações</li>
-                <li>Verificar identidade e prevenir fraudes</li>
-                <li>Cumprir obrigações legais e regulatórias</li>
-                <li>Melhorar nossos serviços e experiência do usuário</li>
-                <li>Enviar comunicações relevantes sobre os serviços</li>
+
+              <ul className="list-disc list-inside text-gray-700 space-y-3">
+                <li>
+                  Realizar o tratamento dos Dados Pessoais somente segundo as instruções do cliente, de acordo com a autorização recebida e para a finalidade exclusiva de execução deste Contrato, sendo vedadas a comercialização e o compartilhamento com terceiros, exceto em casos expressamente autorizados e nas hipóteses previstas na legislação aplicável;
+                </li>
+                <li>
+                  Implementar medidas de segurança, técnicas e administrativas adequadas para garantir um nível de segurança efetivo à proteção dos Dados Pessoais contra acessos não autorizados e incidentes envolvendo destruição, perda, alteração, comunicação ou qualquer forma de tratamento inadequado ou ilícito;
+                </li>
+                <li>
+                  Colaborar com o cliente na efetivação dos direitos dos titulares dos Dados Pessoais quando solicitado, incluindo pedidos de acesso, correção, objeção, exclusão e portabilidade de dados, em consonância com a LGPD e demais legislação aplicável;
+                </li>
+                <li>
+                  Manter registros e comunicar ao cliente, sempre que solicitado, suas atividades de tratamento dos Dados Pessoais, incluindo registros de transferências internacionais e compartilhamento com terceiros;
+                </li>
+                <li>
+                  Comunicar imediatamente ao cliente, por escrito, em prazo não superior a 24 (vinte e quatro) horas do momento em que tomar conhecimento, sobre qualquer tratamento não autorizado ou ilícito dos Dados Pessoais, bem como sobre incidentes de segurança envolvendo Dados Pessoais, sejam estes acidentais ou não — incluindo acesso, aquisição, uso, alteração ou divulgação não autorizados, ou ainda vazamento, perda, destruição ou danos a Dados Pessoais, efetivo ou potencial —, além de adotar todas as medidas necessárias para eliminar ou conter o incidente e manter o cliente informado das medidas de correção e impactos decorrentes;
+                </li>
+                <li>
+                  Permitir e cooperar com investigações de incidentes, realizadas pelo cliente ou por terceiros contratados por ele, de forma a possibilitar ao cliente o cumprimento de suas obrigações relativas à segurança dos Dados Pessoais, inclusive através da implementação de medidas corretivas, avaliações de impacto de risco e resposta às autoridades competentes.
+                </li>
               </ul>
             </section>
 
+            <div className="border-t border-gray-300 my-8"></div>
+
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-dark mb-4">4. Compartilhamento de Dados</h2>
               <p className="text-gray-700 leading-relaxed">
-                A Orizon não vende, aluga ou comercializa seus dados pessoais. Podemos
-                compartilhar informações apenas com:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-2 mt-4">
-                <li>Instituições financeiras parceiras para processamento de pagamentos</li>
-                <li>Prestadores de serviços terceirizados sob acordo de confidencialidade</li>
-                <li>Autoridades governamentais quando exigido por lei</li>
-              </ul>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-dark mb-4">5. Segurança dos Dados</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Implementamos medidas de segurança técnicas e organizacionais para proteger seus
-                dados contra acesso não autorizado, perda, destruição ou alteração. Utilizamos
-                criptografia, firewalls e sistemas de monitoramento contínuo.
+                As obrigações desta cláusula permanecem válidas mesmo após o término do Contrato, enquanto o cliente e as pessoas por ele autorizadas mantiverem ou realizarem qualquer forma de tratamento de Dados Pessoais obtidos e/ou coletados em função da execução deste Contrato.
               </p>
             </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-dark mb-4">6. Seus Direitos (LGPD)</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem direito a:
-              </p>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
-                <li>Confirmação da existência de tratamento de dados</li>
-                <li>Acesso aos seus dados pessoais</li>
-                <li>Correção de dados incompletos, inexatos ou desatualizados</li>
-                <li>Anonimização, bloqueio ou eliminação de dados desnecessários</li>
-                <li>Portabilidade dos dados</li>
-                <li>Revogação do consentimento</li>
-              </ul>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-dark mb-4">7. Cookies e Tecnologias Similares</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Utilizamos cookies e tecnologias similares para melhorar a experiência de
-                navegação, analisar o uso da plataforma e personalizar conteúdo. Você pode
-                gerenciar as preferências de cookies nas configurações do seu navegador.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-dark mb-4">8. Retenção de Dados</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Mantemos seus dados pessoais pelo tempo necessário para cumprir as finalidades
-                para as quais foram coletados, incluindo requisitos legais, contábeis ou de
-                relatórios.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-dark mb-4">9. Alterações na Política</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Esta política de privacidade pode ser atualizada periodicamente. Notificaremos
-                sobre mudanças significativas através da plataforma ou por e-mail.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-dark mb-4">10. Contato - DPO</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em
-                contato com nosso Encarregado de Proteção de Dados (DPO) através dos canais
-                disponíveis em nosso site.
-              </p>
-            </section>
-
-            <div className="mt-12 p-6 bg-gray-light rounded-lg">
-              <p className="text-sm text-gray-600">
-                <strong>Última atualização:</strong> {new Date().toLocaleDateString('pt-BR')}
-              </p>
-              <p className="text-sm text-gray-600 mt-2">
-                <strong>Orizon - Prototype Instituição de Pagamento S.A.</strong>
-                <br />
-                CNPJ: 35.713.491/0001-00
-                <br />
-                Autorizada pelo Banco Central do Brasil
-              </p>
-            </div>
           </div>
         </Container>
       </Section>
     </div>
   );
 }
-
-

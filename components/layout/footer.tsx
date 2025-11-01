@@ -34,13 +34,13 @@ export function Footer() {
               </div>
               <div className="space-y-3">
                 <p className="text-sm text-gray-300 leading-relaxed">
-                  <span className="font-semibold text-white">Orizon Tecnologia e Pagamentos Ltda.</span>
+                  <span className="font-semibold text-white">Orizon pay instituição de pagamento Ltda</span>
                 </p>
-                <p className="text-sm text-gray-300">CNPJ: 12.345.678/0001-90</p>
+                <p className="text-sm text-gray-300">CNPJ: 63.095.227/0001-88</p>
                 <p className="text-sm text-gray-300 leading-relaxed">
-                  Av. Paulista, 1000, 15º andar<br />
-                  Bela Vista, São Paulo, SP<br />
-                  CEP 01.310-100
+                  Avenida - PREF OSMAR CUNHA, 416<br />
+                  Centro, Florianópolis, SC<br />
+                  CEP: 88.015-100
                 </p>
               </div>
             </div>
@@ -142,7 +142,7 @@ export function Footer() {
                       <FaInstagram className="text-primary group-hover:text-white" />
                     </a>
                     <a
-                      href="https://linkedin.com"
+                      href="https://www.linkedin.com/company/orizon-pay-instituicao-de-pagamento-ltda/?viewAsMember=true"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 group"
@@ -184,7 +184,7 @@ export function Footer() {
         <Container>
           <div className="flex items-center justify-center">
             <p className="text-sm text-white text-center">
-              Orizon © {new Date().getFullYear()}. Todos os direitos reservados.
+              Orizon pay instituição de pagamento Ltda © {new Date().getFullYear()}. Todos os direitos reservados.
             </p>
           </div>
         </Container>
