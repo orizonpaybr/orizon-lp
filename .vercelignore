@@ -1,4 +1,1 @@
-# Não ignorar os arquivos do Prisma
-!node_modules/.prisma/client
-!node_modules/@prisma/client
-
+# Vazio - garantir que nada seja ignorado
