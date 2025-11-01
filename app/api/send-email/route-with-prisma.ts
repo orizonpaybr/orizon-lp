@@ -40,12 +40,19 @@ export async function POST(request: NextRequest) {
       <p><strong>Mensagem:</strong></p>
       <p>${validatedData.message}</p>
       <p><strong>Data de Envio:</strong> ${contactForm.createdAt.toLocaleString('pt-BR')}</p>
+      <hr style="margin: 20px 0;">
+      <p style="font-size: 12px; color: #666;">
+        <strong>Orizon pay instituição de pagamento Ltda</strong><br>
+        CNPJ: 63.095.227/0001-88<br>
+        Avenida - PREF OSMAR CUNHA, 416, Centro, Florianópolis, SC, CEP: 88.015-100<br>
+        Autorizada pelo BACEN - Banco Central do Brasil
+      </p>
     `;
 
     // Enviar email
     const { data, error } = await resend.emails.send({
       from: 'Orizon <onboarding@resend.dev>',
-      to: ['suporte@orizonpay.io'],
+      to: ['suporte@orizonpay.io', 'comercial@orizonpay.io'],
       subject: `Nova mensagem de contato - ${validatedData.firstName} ${validatedData.lastName}`,
       html: emailContent,
     });

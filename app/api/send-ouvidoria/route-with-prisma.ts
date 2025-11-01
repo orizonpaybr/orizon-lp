@@ -107,7 +107,7 @@ export async function POST(request: NextRequest) {
     // Enviar email para a empresa
     await resend.emails.send({
       from: 'Ouvidoria Orizon <onboarding@resend.dev>',
-      to: ['suporte@orizonpay.io'],
+      to: ['suporte@orizonpay.io', 'sac@orizonpay.io'],
       subject: `Nova Manifestação - Protocolo ${protocol}`,
       html: emailContent,
     });
@@ -138,9 +138,10 @@ export async function POST(request: NextRequest) {
       
       <hr style="margin: 20px 0;">
       <p style="font-size: 12px; color: #666;">
-        <strong>Orizon - Prototype Instituição de Pagamento S.A.</strong><br>
-        CNPJ: 35.713.491/0001-00<br>
-        Autorizada pelo Banco Central do Brasil
+        <strong>Orizon pay instituição de pagamento Ltda</strong><br>
+        CNPJ: 63.095.227/0001-88<br>
+        Avenida - PREF OSMAR CUNHA, 416, Centro, Florianópolis, SC, CEP: 88.015-100<br>
+        Autorizada pelo BACEN - Banco Central do Brasil
       </p>
     `;
 
