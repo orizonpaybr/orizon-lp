@@ -1,0 +1,4 @@
+# Não ignorar os arquivos do Prisma
+!node_modules/.prisma/client
+!node_modules/@prisma/client
+
