@@ -9,10 +9,13 @@ const nextConfig: NextConfig = {
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
-      config.externals.push('@prisma/client', '@prisma/engines');
+      // Não adicionar Prisma aos externals para permitir bundling correto
+      config.externals = config.externals || [];
     }
     return config;
   },
+  // Garantir que o output seja standalone para Vercel
+  output: 'standalone',
 };
 
 export default nextConfig;
