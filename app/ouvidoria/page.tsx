@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { IMaskInput } from 'react-imask';
 import Link from "next/link";
 import { HiArrowLeft, HiPaperClip, HiCheck, HiX, HiDocumentText } from "react-icons/hi";
+import { submitComplaint } from '@/app/actions/ouvidoria';
 
 const ouvidoriaSchema = z.object({
   nomeCompleto: z.string().min(2, 'Nome completo deve ter pelo menos 2 caracteres'),
@@ -97,21 +98,16 @@ export default function OuvidoriaPage() {
         formData.append(`anexo_${index}`, file);
       });
 
-      const response = await fetch('/api/send-ouvidoria', {
-        method: 'POST',
-        body: formData,
-      });
+      const result = await submitComplaint(formData);
 
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || 'Erro ao enviar manifestação');
+      if (result.success) {
+        console.log('Manifestação enviada com sucesso:', result);
+        toast.success(`Manifestação enviada com sucesso! Protocolo: ${result.protocol}`);
+        reset();
+        setSelectedFiles([]);
+      } else {
+        toast.error(result.error || 'Erro ao enviar manifestação. Tente novamente.');
       }
-
-      console.log('Manifestação enviada com sucesso:', result);
-      toast.success('Manifestação enviada com sucesso! Você receberá um número de protocolo em breve.');
-      reset();
-      setSelectedFiles([]);
     } catch (error) {
       console.error('Erro ao enviar manifestação:', error);
       toast.error('Erro ao enviar manifestação. Tente novamente.');

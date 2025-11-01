@@ -15,6 +15,7 @@ import { Textarea } from '../ui/textarea';
 import { Checkbox } from '../ui/checkbox';
 import { Button } from '../ui/button';
 import { contactFormSchema, ContactFormValues } from '@/lib/validations';
+import { submitContactForm } from '@/app/actions/contact';
 
 const volumeOptions = [
   { value: '', label: 'Selecione' },
@@ -43,23 +44,15 @@ export function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+      const result = await submitContactForm(data);
 
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || 'Erro ao enviar mensagem');
+      if (result.success) {
+        console.log('Email enviado com sucesso:', result);
+        toast.success('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        reset();
+      } else {
+        toast.error(result.error || 'Erro ao enviar mensagem. Tente novamente.');
       }
-
-      console.log('Email enviado com sucesso:', result);
-      toast.success('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-      reset();
     } catch (error) {
       console.error('Erro ao enviar email:', error);
       toast.error('Erro ao enviar mensagem. Tente novamente.');
