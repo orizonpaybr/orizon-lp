@@ -77,6 +77,8 @@ export function ContactSection() {
           fill
           className="object-contain object-left"
         />
+        {/* Overlay para melhorar legibilidade do texto */}
+        <div className="absolute inset-0 bg-white/60 md:bg-white/50"></div>
       </div>
 
       <Container className="relative z-10">

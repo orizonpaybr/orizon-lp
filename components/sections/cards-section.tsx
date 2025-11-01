@@ -48,7 +48,7 @@ export function CardsSection() {
                 alt="App no celular mostrando pagamentos recebidos"
                 width={500}
                 height={600}
-                className="relative z-10 drop-shadow-lg rounded-2xl translate-y-4 -translate-x-2 md:translate-y-8 md:-translate-x-4 object-contain w-[400px] h-[480px] md:w-[550px] md:h-[660px]"
+                className="relative z-10 drop-shadow-lg rounded-2xl object-contain w-[400px] h-[480px] md:w-[550px] md:h-[660px]"
               />
             </div>
           </motion.div>

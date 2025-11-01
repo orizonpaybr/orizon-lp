@@ -25,9 +25,9 @@ export function PixSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative overflow-hidden"
+            className="relative overflow-visible"
           >
-            <div className="relative w-full max-w-sm md:max-w-xl mx-auto overflow-visible flex items-center justify-center">
+            <div className="relative w-full max-w-2xl md:max-w-4xl mx-auto overflow-visible flex items-center justify-center min-h-[600px] md:min-h-[900px]">
               {/* Círculo laranja de fundo */}
               <div className="absolute w-[280px] h-[280px] md:w-[400px] md:h-[400px] bg-accent rounded-full"></div>
               
@@ -45,9 +45,9 @@ export function PixSection() {
               <Image
                 src="/images/mockup-pix-2-585x650.webp"
                 alt="Celular mostrando notificações de pagamento recebido via PIX"
-                width={400}
-                height={480}
-                className="relative z-10 drop-shadow-lg rounded-2xl translate-y-4 translate-x-4 md:translate-y-8 md:translate-x-12 object-contain w-[300px] h-[360px] md:w-[450px] md:h-[540px]"
+                width={800}
+                height={960}
+                className="relative z-10 drop-shadow-2xl rounded-2xl translate-y-6 translate-x-6 md:translate-y-10 md:translate-x-14 object-cover w-[320px] h-[384px] md:w-[480px] md:h-[576px]"
               />
             </div>
           </motion.div>
