@@ -10,7 +10,9 @@ const complaintSchema = z.object({
   nomeCompleto: z.string().min(2, 'Nome completo deve ter pelo menos 2 caracteres'),
   cpf: z.string().min(14, 'CPF deve ter o formato 000.000.000-00'),
   email: z.string().email('Email inválido'),
-  telefone: z.string().min(14, 'Telefone deve ter o formato (11) 99999-9999'),
+  telefone: z.string()
+    .min(14, 'Telefone deve ter o formato (11) 99999-9999')
+    .regex(/^\(\d{2}\) \d{4,5}-\d{4}$/, 'Telefone deve ter o formato (11) 99999-9999'),
   tipoManifestacao: z.string().min(1, 'Selecione o tipo de manifestação'),
   mensagem: z.string().min(10, 'Mensagem deve ter pelo menos 10 caracteres'),
   dataOcorrido: z.string().optional(),
@@ -84,12 +86,12 @@ export async function POST(request: NextRequest) {
     
     // Preparar informações dos anexos
     const attachmentsInfo = attachments.length > 0 
-      ? `<h3>Anexos:</h3><ul>${attachments.map((att: any) => `<li>${att.fileName} (${(att.fileSize / 1024 / 1024).toFixed(2)} MB)</li>`).join('')}</ul>`
+      ? `<h3>Anexos:</h3><ul>${attachments.map((att) => `<li>${att.fileName} (${(att.fileSize / 1024 / 1024).toFixed(2)} MB)</li>`).join('')}</ul>`
       : '<p><strong>Anexos:</strong> Nenhum arquivo anexado</p>';
 
     // Preparar anexos para o email (baixar do Cloudflare R2)
     const emailAttachments = await Promise.all(
-      files.map(async (file, index) => {
+      files.map(async (file) => {
         const buffer = Buffer.from(await file.arrayBuffer());
         return {
           filename: file.name,
@@ -151,9 +153,10 @@ export async function POST(request: NextRequest) {
       
       <hr style="margin: 20px 0;">
       <p style="font-size: 12px; color: #666;">
-        <strong>Orizon - Prototype Instituição de Pagamento S.A.</strong><br>
-        CNPJ: 35.713.491/0001-00<br>
-        Autorizada pelo Banco Central do Brasil
+        <strong>Orizon pay instituição de pagamento Ltda</strong><br>
+        CNPJ: 63.095.227/0001-88<br>
+        Avenida - PREF OSMAR CUNHA, 416, Centro, Florianópolis, SC, CEP: 88.015-100<br>
+        Autorizada pelo BACEN - Banco Central do Brasil
       </p>
     `;
 

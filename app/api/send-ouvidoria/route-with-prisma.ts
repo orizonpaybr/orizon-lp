@@ -10,7 +10,9 @@ const complaintSchema = z.object({
   nomeCompleto: z.string().min(2, 'Nome completo deve ter pelo menos 2 caracteres'),
   cpf: z.string().min(14, 'CPF deve ter o formato 000.000.000-00'),
   email: z.string().email('Email inválido'),
-  telefone: z.string().min(14, 'Telefone deve ter o formato (11) 99999-9999'),
+  telefone: z.string()
+    .min(14, 'Telefone deve ter o formato (11) 99999-9999')
+    .regex(/^\(\d{2}\) \d{4,5}-\d{4}$/, 'Telefone deve ter o formato (11) 99999-9999'),
   tipoManifestacao: z.string().min(1, 'Selecione o tipo de manifestação'),
   mensagem: z.string().min(10, 'Mensagem deve ter pelo menos 10 caracteres'),
   dataOcorrido: z.string().optional(),

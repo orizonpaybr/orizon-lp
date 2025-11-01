@@ -7,7 +7,23 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    let body;
+    try {
+      body = await request.json();
+    } catch (jsonError) {
+      console.error('Erro ao fazer parse do JSON:', jsonError);
+      return NextResponse.json(
+        { error: 'Formato de dados inválido. Por favor, verifique os dados enviados.' },
+        { status: 400 }
+      );
+    }
+    
+    // Transformar acceptTerms se vier como string
+    if (body.acceptTerms === 'true' || body.acceptTerms === true) {
+      body.acceptTerms = true;
+    } else if (body.acceptTerms === 'false' || body.acceptTerms === false) {
+      body.acceptTerms = false;
+    }
     
     // Validar os dados do formulário
     const validatedData = contactFormSchema.parse(body);
