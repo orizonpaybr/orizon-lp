@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
 
     // Enviar email
     const { data, error } = await resend.emails.send({
-      from: 'Orizon <onboarding@resend.dev>',
+      from: 'Orizon <suporte@orizonpay.io>',
       to: ['suporte@orizonpay.io', 'comercial@orizonpay.io'],
       subject: `Nova mensagem de contato - ${validatedData.firstName} ${validatedData.lastName}`,
       html: emailContent,

@@ -129,7 +129,7 @@ export async function submitComplaint(formData: FormData) {
     console.log('RESEND_API_KEY configurada:', !!process.env.RESEND_API_KEY)
     
     const emailResult = await resend.emails.send({
-      from: 'Ouvidoria Orizon <onboarding@resend.dev>',
+      from: 'Ouvidoria Orizon <suporte@orizonpay.io>',
       to: ['suporte@orizonpay.io', 'sac@orizonpay.io'],
       subject: `Nova Manifestação - Protocolo ${protocol}`,
       html: emailContent,
@@ -181,7 +181,7 @@ export async function submitComplaint(formData: FormData) {
     console.log('📧 Tentando enviar email de confirmação para usuário...')
     
     const confirmationResult = await resend.emails.send({
-      from: 'Ouvidoria Orizon <onboarding@resend.dev>',
+      from: 'Ouvidoria Orizon <suporte@orizonpay.io>',
       to: [validatedData.email],
       subject: `Confirmação de Manifestação - Protocolo ${protocol}`,
       html: confirmationContent,

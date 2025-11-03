@@ -54,7 +54,7 @@ export async function submitContactForm(data: z.infer<typeof contactFormSchema>)
     console.log('RESEND_API_KEY configurada:', !!process.env.RESEND_API_KEY)
     
     const emailResult = await resend.emails.send({
-      from: 'Orizon <onboarding@resend.dev>',
+      from: 'Orizon <suporte@orizonpay.io>',
       to: ['suporte@orizonpay.io', 'comercial@orizonpay.io'],
       subject: `Nova mensagem de contato - ${validatedData.firstName} ${validatedData.lastName}`,
       html: emailContent,

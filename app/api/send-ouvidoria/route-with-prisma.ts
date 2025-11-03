@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
 
     // Enviar email para a empresa
     await resend.emails.send({
-      from: 'Ouvidoria Orizon <onboarding@resend.dev>',
+      from: 'Ouvidoria Orizon <suporte@orizonpay.io>',
       to: ['suporte@orizonpay.io', 'sac@orizonpay.io'],
       subject: `Nova Manifestação - Protocolo ${protocol}`,
       html: emailContent,
@@ -148,7 +148,7 @@ export async function POST(request: NextRequest) {
     `;
 
     await resend.emails.send({
-      from: 'Ouvidoria Orizon <onboarding@resend.dev>',
+      from: 'Ouvidoria Orizon <suporte@orizonpay.io>',
       to: [validatedData.email],
       subject: `Confirmação de Manifestação - Protocolo ${protocol}`,
       html: confirmationContent,
