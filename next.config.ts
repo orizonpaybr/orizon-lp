@@ -7,7 +7,10 @@ const nextConfig: NextConfig = {
       bodySizeLimit: '10mb',
     },
   },
-  serverExternalPackages: ['@prisma/client', '@prisma/engines'],
+  serverExternalPackages: ['@prisma/client', 'prisma', '@prisma/engines'],
+  // Configuração vazia do Turbopack para silenciar o warning
+  // O serverExternalPackages já faz o necessário para o Prisma
+  turbopack: {},
 };
 
 export default nextConfig;
