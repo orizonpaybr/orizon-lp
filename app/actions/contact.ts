@@ -50,12 +50,24 @@ export async function submitContactForm(data: z.infer<typeof contactFormSchema>)
     `
 
     // Enviar email
-    await resend.emails.send({
+    console.log('📧 Tentando enviar email via Resend...')
+    console.log('RESEND_API_KEY configurada:', !!process.env.RESEND_API_KEY)
+    
+    const emailResult = await resend.emails.send({
       from: 'Orizon <onboarding@resend.dev>',
       to: ['suporte@orizonpay.io', 'comercial@orizonpay.io'],
       subject: `Nova mensagem de contato - ${validatedData.firstName} ${validatedData.lastName}`,
       html: emailContent,
     })
+
+    console.log('📧 Resultado do envio de email:', emailResult)
+
+    if (emailResult.error) {
+      console.error('❌ Erro do Resend:', emailResult.error)
+      throw new Error(`Erro ao enviar email: ${emailResult.error.message}`)
+    }
+
+    console.log('✅ Email enviado com sucesso! ID:', emailResult.data?.id)
 
     return { 
       success: true, 

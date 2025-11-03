@@ -125,13 +125,25 @@ export async function submitComplaint(formData: FormData) {
     )
 
     // Enviar email para a empresa
-    await resend.emails.send({
+    console.log('📧 Tentando enviar email via Resend (empresa)...')
+    console.log('RESEND_API_KEY configurada:', !!process.env.RESEND_API_KEY)
+    
+    const emailResult = await resend.emails.send({
       from: 'Ouvidoria Orizon <onboarding@resend.dev>',
       to: ['suporte@orizonpay.io', 'sac@orizonpay.io'],
       subject: `Nova Manifestação - Protocolo ${protocol}`,
       html: emailContent,
       attachments: emailAttachments,
     })
+
+    console.log('📧 Resultado do envio de email (empresa):', emailResult)
+
+    if (emailResult.error) {
+      console.error('❌ Erro do Resend (empresa):', emailResult.error)
+      throw new Error(`Erro ao enviar email: ${emailResult.error.message}`)
+    }
+
+    console.log('✅ Email para empresa enviado! ID:', emailResult.data?.id)
 
     // Email de confirmação para o usuário
     const confirmationContent = `
@@ -166,12 +178,23 @@ export async function submitComplaint(formData: FormData) {
       </p>
     `
 
-    await resend.emails.send({
+    console.log('📧 Tentando enviar email de confirmação para usuário...')
+    
+    const confirmationResult = await resend.emails.send({
       from: 'Ouvidoria Orizon <onboarding@resend.dev>',
       to: [validatedData.email],
       subject: `Confirmação de Manifestação - Protocolo ${protocol}`,
       html: confirmationContent,
     })
+
+    console.log('📧 Resultado do envio de confirmação:', confirmationResult)
+
+    if (confirmationResult.error) {
+      console.error('❌ Erro do Resend (confirmação):', confirmationResult.error)
+      // Não falha se o email de confirmação falhar, mas loga o erro
+    } else {
+      console.log('✅ Email de confirmação enviado! ID:', confirmationResult.data?.id)
+    }
 
     return { 
       success: true,
