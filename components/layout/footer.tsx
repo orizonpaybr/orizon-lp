@@ -153,23 +153,23 @@ export function Footer() {
                   </div>
                 </div>
 
-                {/* Press Contact */}
+                {/* Contact Emails */}
                 <div>
-                  <h5 className="text-sm font-semibold mb-3 text-gray-300">Assessoria de Imprensa</h5>
+                  <h5 className="text-sm font-semibold mb-3 text-gray-300">E-mail</h5>
                   <div className="space-y-2">
                     <a 
-                      href="mailto:imprensa@orizon.com.br"
+                      href="mailto:sac@orizonpay.io"
                       className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors group"
                     >
                       <FaEnvelope className="text-xs group-hover:scale-110 transition-transform" />
-                      imprensa@orizon.com.br
+                      sac@orizonpay.io
                     </a>
                     <a 
-                      href="mailto:comunicacao@orizon.com.br"
+                      href="mailto:comercial@orizonpay.io"
                       className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors group"
                     >
                       <FaEnvelope className="text-xs group-hover:scale-110 transition-transform" />
-                      comunicacao@orizon.com.br
+                      comercial@orizonpay.io
                     </a>
                   </div>
                 </div>
