@@ -130,7 +130,7 @@ export async function submitComplaint(formData: FormData) {
     
     const emailResult = await resend.emails.send({
       from: 'Ouvidoria Orizon <suporte@orizonpay.io>',
-      to: ['suporte@orizonpay.io', 'sac@orizonpay.io'],
+      to: ['sac@orizonpay.io'],
       subject: `Nova Manifestação - Protocolo ${protocol}`,
       html: emailContent,
       attachments: emailAttachments,

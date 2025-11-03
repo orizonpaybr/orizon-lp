@@ -55,7 +55,7 @@ export async function submitContactForm(data: z.infer<typeof contactFormSchema>)
     
     const emailResult = await resend.emails.send({
       from: 'Orizon <suporte@orizonpay.io>',
-      to: ['suporte@orizonpay.io', 'comercial@orizonpay.io'],
+      to: ['comercial@orizonpay.io'],
       subject: `Nova mensagem de contato - ${validatedData.firstName} ${validatedData.lastName}`,
       html: emailContent,
     })
