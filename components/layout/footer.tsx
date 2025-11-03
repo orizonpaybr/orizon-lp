@@ -124,7 +124,7 @@ export function Footer() {
                   <h5 className="text-sm font-semibold mb-4 text-gray-300">Redes Sociais</h5>
                   <div className="flex gap-4">
                     <a
-                      href="https://facebook.com"
+                      href="https://www.facebook.com/profile.php?id=61581862817153"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 group"
@@ -133,7 +133,7 @@ export function Footer() {
                       <FaFacebook className="text-primary group-hover:text-white" />
                     </a>
                     <a
-                      href="https://instagram.com"
+                      href="https://www.instagram.com/orizon.pay?igsh=MTQ0N3IycXpsbWhtdg%3D%3D&utm_source=qr"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 group"
