@@ -1,17 +1,23 @@
-# 🚀 Solução Rápida - Erro P3005
+# 🚀 Solução Rápida - Erros do Prisma na Vercel
 
-## O Problema
-Você está vendo este erro:
+## Os Problemas
+
+### 1. Erro P3005
 ```
 Error: P3005
 The database schema is not empty.
 ```
-
 Isso acontece porque seu banco de dados de **produção já tem as tabelas criadas**, mas o Prisma não sabe que as migrations já foram aplicadas.
 
-## ✅ Solução em 3 Passos
+### 2. Erro Query Engine Not Found (na Vercel)
+```
+Prisma Client could not locate the Query Engine for runtime "rhel-openssl-3.0.x"
+```
+Isso acontece quando o Next.js 16 (Turbopack) não copia corretamente os binários do Prisma para o deploy.
 
-### 1. Fazer Baseline da Migration
+## ✅ Solução Completa em 4 Passos
+
+### 1. Fazer Baseline da Migration (Erro P3005)
 Execute este comando para marcar a migration inicial como aplicada:
 
 ```bash
@@ -20,7 +26,18 @@ npx prisma migrate resolve --applied "0_init"
 
 Isso diz ao Prisma: "Ei, essa migration já foi aplicada, não precisa executá-la novamente!"
 
-### 2. Testar o Build Localmente
+### 2. Regenerar o Prisma Client
+Force a regeneração do client com os binários corretos:
+
+```bash
+# Limpar o cache anterior
+rm -rf node_modules/.prisma
+
+# Regenerar o Prisma Client
+npm run postinstall
+```
+
+### 3. Testar o Build Localmente
 Agora tente buildar novamente:
 
 ```bash
@@ -29,21 +46,43 @@ npm run build
 
 ✅ Deve funcionar sem erros!
 
-> **Nota:** Se você ver um warning sobre Turbopack, isso já foi corrigido na configuração. O build deve completar com sucesso.
+> **Nota:** O build agora gera o Prisma Client duas vezes para garantir que todos os binários sejam incluídos.
 
-### 3. Fazer Push e Deploy
+### 4. Fazer Push e Deploy
 ```bash
 git add .
-git commit -m "fix: ajusta configuração do Prisma para produção"
+git commit -m "fix: corrige Prisma Client na Vercel com Next.js 16"
 git push
 ```
 
 A Vercel vai fazer o deploy automaticamente.
 
-## 🎯 Por Que Isso Resolve?
+## 🎯 O Que Foi Corrigido?
 
-- **Antes:** O Prisma tentava aplicar a migration `0_init` no banco de produção que já tinha as tabelas
-- **Depois:** O Prisma sabe que a migration já foi aplicada e apenas gera o client
+### Arquivos Modificados:
+
+1. **`prisma/schema.prisma`**
+   - Adicionado `output` explícito para o client
+   - Mantido `binaryTargets` para Vercel
+
+2. **`next.config.ts`**
+   - Configurado Turbopack para resolver corretamente o Prisma
+   - Adicionado `outputFileTracingIncludes` para copiar binários .node
+   - Configurado `turbopack.resolveAlias` para o Prisma Client
+
+3. **`lib/prisma.ts`**
+   - Adicionada configuração interna para forçar os binaryTargets corretos
+
+4. **`instrumentation.ts`** (NOVO)
+   - Garante que o Prisma seja inicializado no startup
+   - Testa a conexão automaticamente
+
+5. **`package.json`**
+   - Scripts de build agora executam `prisma generate` duas vezes
+   - Garante que todos os binários sejam gerados
+
+6. **`.npmrc`** (NOVO)
+   - Configuração para não pular a geração automática dos binários
 
 ## 📋 Verificação Rápida
 

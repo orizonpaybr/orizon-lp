@@ -8,9 +8,16 @@ const nextConfig: NextConfig = {
     },
   },
   serverExternalPackages: ['@prisma/client', 'prisma', '@prisma/engines'],
-  // Configuração vazia do Turbopack para silenciar o warning
-  // O serverExternalPackages já faz o necessário para o Prisma
-  turbopack: {},
+  // Configuração do Turbopack para incluir os binários do Prisma
+  turbopack: {
+    resolveAlias: {
+      '.prisma/client/index-browser': './node_modules/.prisma/client/index-browser.js',
+    },
+  },
+  // Configuração adicional para garantir que os binários sejam copiados
+  outputFileTracingIncludes: {
+    '/*': ['./node_modules/.prisma/client/*.node'],
+  },
 };
 
 export default nextConfig;
