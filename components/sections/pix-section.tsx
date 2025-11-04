@@ -34,7 +34,7 @@ export function PixSection() {
               {/* Imagem de fundo azul */}
               <div className="absolute w-[280px] h-[280px] md:w-[400px] md:h-[400px] bg-accent rounded-full overflow-hidden">
                 <Image
-                  src="/images/mobile-app-screen-bg.jpg"
+                  src="/images/mobile-app-screen-bg.png"
                   alt="Fundo azul para seção PIX"
                   fill
                   className="object-cover opacity-30"

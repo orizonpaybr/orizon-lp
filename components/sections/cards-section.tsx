@@ -35,7 +35,7 @@ export function CardsSection() {
               {/* Imagem de fundo azul */}
               <div className="absolute w-[350px] h-[350px] md:w-[500px] md:h-[500px] bg-accent rounded-full overflow-hidden">
                 <Image
-                  src="/images/mobile-app-screen-bg.jpg"
+                  src="/images/mobile-app-screen-bg.png"
                   alt="Fundo azul para seção de cartões"
                   fill
                   className="object-cover opacity-30"
