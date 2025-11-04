@@ -1,9 +1,36 @@
+'use client';
+
 import Link from 'next/link';
-import Image from 'next/image';
+import { useEffect } from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import { Container } from '../ui/container';
 
 export function Footer() {
+  useEffect(() => {
+    // Verifica se o script já foi carregado
+    if (document.getElementById('ra-embed-verified-seal')) {
+      return;
+    }
+
+    // Cria e adiciona o script
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.id = 'ra-embed-verified-seal';
+    script.src = 'https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js';
+    script.setAttribute('data-id', 'S0FUTWgtOEZHdnpOaUFJZjpvcml6b24tcGF5LWluc3RpdHVpY2FvLWRlLXBhZ2FtZW50by1sdGRh');
+    script.setAttribute('data-target', 'ra-verified-seal');
+    script.setAttribute('data-model', 'horizontal_1');
+    document.body.appendChild(script);
+
+    return () => {
+      // Limpa o script quando o componente desmontar
+      const scriptElement = document.getElementById('ra-embed-verified-seal');
+      if (scriptElement) {
+        scriptElement.remove();
+      }
+    };
+  }, []);
+
   return (
     <footer className="bg-dark text-white relative overflow-hidden">
 
@@ -103,14 +130,16 @@ export function Footer() {
                   <FaWhatsapp className="group-hover:scale-110 transition-transform" />
                   Abrir uma Reclamação
                 </Link>
+                
                 <div className="mt-6">
-                  <Image
-                    src="/images/verified.svg"
-                    alt="Verificado"
-                    width={120}
-                    height={40}
-                    className="opacity-80 hover:opacity-100 transition-opacity"
-                  />
+                  <a
+                    href="https://www.reclameaqui.com.br/empresa/orizon-pay-instituicao-de-pagamento-ltda/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div id="ra-verified-seal"></div>
+                  </a>
                 </div>
               </div>
             </div>

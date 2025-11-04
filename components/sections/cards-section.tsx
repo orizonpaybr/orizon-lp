@@ -29,14 +29,14 @@ export function CardsSection() {
             className="relative overflow-hidden lg:order-2"
           >
             <div className="relative w-full max-w-lg md:max-w-2xl mx-auto overflow-visible flex items-center justify-center">
-              {/* Círculo laranja de fundo */}
+              {/* Círculo azul de fundo */}
               <div className="absolute w-[350px] h-[350px] md:w-[500px] md:h-[500px] bg-accent rounded-full"></div>
               
-              {/* Imagem de fundo laranja */}
+              {/* Imagem de fundo azul */}
               <div className="absolute w-[350px] h-[350px] md:w-[500px] md:h-[500px] bg-accent rounded-full overflow-hidden">
                 <Image
                   src="/images/mobile-app-screen-bg.jpg"
-                  alt="Fundo laranja para seção de cartões"
+                  alt="Fundo azul para seção de cartões"
                   fill
                   className="object-cover opacity-30"
                 />

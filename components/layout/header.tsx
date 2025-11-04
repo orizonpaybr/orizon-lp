@@ -22,7 +22,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-primary">Orizon</span>
+            <span className="text-4xl font-bold text-primary">Orizon</span>
           </Link>
 
           {/* Desktop Navigation */}

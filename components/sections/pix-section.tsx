@@ -28,14 +28,14 @@ export function PixSection() {
             className="relative overflow-visible"
           >
             <div className="relative w-full max-w-2xl md:max-w-4xl mx-auto overflow-visible flex items-center justify-center min-h-[600px] md:min-h-[900px]">
-              {/* Círculo laranja de fundo */}
+              {/* Círculo azul de fundo */}
               <div className="absolute w-[280px] h-[280px] md:w-[400px] md:h-[400px] bg-accent rounded-full"></div>
               
-              {/* Imagem de fundo laranja */}
+              {/* Imagem de fundo azul */}
               <div className="absolute w-[280px] h-[280px] md:w-[400px] md:h-[400px] bg-accent rounded-full overflow-hidden">
                 <Image
                   src="/images/mobile-app-screen-bg.jpg"
-                  alt="Fundo laranja para seção PIX"
+                  alt="Fundo azul para seção PIX"
                   fill
                   className="object-cover opacity-30"
                 />

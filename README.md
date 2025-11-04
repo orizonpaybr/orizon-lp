@@ -27,8 +27,8 @@ colors: {
     light: '#00BFFF',
   },
   accent: {
-    DEFAULT: '#FF8A00',
-    hover: '#E67A00',
+    DEFAULT: '#009EE0',
+    hover: '#007BC7',
   },
   dark: {
     DEFAULT: '#0C243B',
@@ -181,7 +181,7 @@ Para customizar as cores, edite o arquivo `app/globals.css`:
 ```css
 :root {
   --primary: #007BC7;
-  --accent: #FF8A00;
+  --accent: #009EE0;
   /* ... outras variáveis */
 }
 ```
