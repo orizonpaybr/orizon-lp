@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { Container } from '../ui/container';
 import { Button } from '../ui/button';
@@ -15,6 +16,29 @@ const navItems = [
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  // Função para ajustar o href baseado na rota atual
+  const getHref = (href: string) => {
+    // Se o href começa com # e não estamos na página inicial, redireciona para /#hash
+    if (href.startsWith('#') && pathname !== '/') {
+      return `/${href}`;
+    }
+    return href;
+  };
+
+  // Função para lidar com o clique e scroll
+  const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Se estivermos em outra página e o link é para uma seção da página inicial
+    if (href.startsWith('#') && pathname !== '/') {
+      e.preventDefault();
+      // Navega para a página inicial com o hash
+      router.push(`/${href}`);
+    }
+    // Se já estivermos na página inicial, deixa o comportamento padrão do Link funcionar
+    // (o scroll suave já está configurado no HTML)
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
@@ -30,7 +54,8 @@ export function Header() {
             {navItems.map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                href={getHref(item.href)}
+                onClick={(e) => handleSectionClick(e, item.href)}
                 className="text-dark hover:text-primary transition-colors font-medium"
               >
                 {item.label}
@@ -40,7 +65,10 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Link href="#contato">
+            <Link 
+              href={getHref('#contato')}
+              onClick={(e) => handleSectionClick(e, '#contato')}
+            >
               <Button variant="primary" size="md">
                 Seja Cliente
               </Button>
@@ -64,14 +92,23 @@ export function Header() {
               {navItems.map((item) => (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={getHref(item.href)}
+                  onClick={(e) => {
+                    handleSectionClick(e, item.href);
+                    setIsMenuOpen(false);
+                  }}
                   className="text-dark hover:text-primary transition-colors font-medium py-2"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
               ))}
-              <Link href="#contato" onClick={() => setIsMenuOpen(false)}>
+              <Link 
+                href={getHref('#contato')} 
+                onClick={(e) => {
+                  handleSectionClick(e, '#contato');
+                  setIsMenuOpen(false);
+                }}
+              >
                 <Button variant="primary" size="md" className="mt-2 w-full">
                   Seja Cliente
                 </Button>

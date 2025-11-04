@@ -120,14 +120,6 @@ export default function OuvidoriaPage() {
     <div className="pt-20">
       <Section className="bg-gray-light py-16 md:py-24">
         <Container>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary-hover transition-colors mb-8"
-          >
-            <HiArrowLeft size={20} />
-            Voltar para o início
-          </Link>
-
           <div className="max-w-2xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
               <h1 className="text-3xl font-bold text-dark mb-4 text-center">

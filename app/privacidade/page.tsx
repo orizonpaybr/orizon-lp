@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
-import Link from "next/link";
-import { HiArrowLeft } from "react-icons/hi";
+// import Link from "next/link";
+// import { HiArrowLeft } from "react-icons/hi";
 
 export const metadata = {
   title: "Política de Privacidade - Orizon",
@@ -13,13 +13,13 @@ export default function PrivacidadePage() {
     <div className="pt-20">
       <Section className="bg-gray-light py-16 md:py-24">
         <Container>
-          <Link
+          {/* <Link
             href="/"
             className="inline-flex items-center gap-2 text-primary hover:text-primary-hover transition-colors mb-8"
           >
             <HiArrowLeft size={20} />
             Voltar para o início
-          </Link>
+          </Link> */}
 
           <h1 className="text-4xl md:text-5xl font-bold text-dark mb-8">
             Política de Privacidade
