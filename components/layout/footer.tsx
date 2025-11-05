@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect } from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { Container } from '../ui/container';
 
 export function Footer() {
@@ -127,7 +127,7 @@ export function Footer() {
                   href="/ouvidoria" 
                   className="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-all duration-300 group"
                 >
-                  <FaWhatsapp className="group-hover:scale-110 transition-transform" />
+                  <FaEnvelope className="group-hover:scale-110 transition-transform" />
                   Abrir uma Reclamação
                 </Link>
                 

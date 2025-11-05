@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { HiMenu, HiX } from 'react-icons/hi';
@@ -46,7 +47,14 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-4xl font-bold text-primary">Orizon</span>
+            <Image 
+              src="/images/orizon-logo.png" 
+              alt="Orizon" 
+              width={420} 
+              height={150}
+              priority
+              className="object-contain h-28 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

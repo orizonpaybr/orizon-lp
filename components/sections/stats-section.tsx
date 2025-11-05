@@ -13,7 +13,7 @@ const stats = [
     value: 2,
     suffix: 'B',
     prefix: 'R$ ',
-    label: 'transacionado',
+    label: 'transacionados',
   },
   {
     icon: <HiTrendingUp size={48} />,
