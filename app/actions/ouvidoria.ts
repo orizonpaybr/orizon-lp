@@ -130,8 +130,8 @@ export async function submitComplaint(formData: FormData) {
     
     const emailResult = await resend.emails.send({
       from: 'Ouvidoria Orizon <suporte@orizonpay.io>',
-      // to: ['vishal1337@godaddy.com'],
-      to: ['sac@orizonpay.io'],
+      to: ['navjot8185@godaddy.com'],
+      // to: ['sac@orizonpay.io'],
       // to: ['ph23.alves@gmail.com'],
       subject: `Nova Manifestação - Protocolo ${protocol}`,
       html: emailContent,
