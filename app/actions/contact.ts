@@ -49,7 +49,6 @@ export async function submitContactForm(data: z.infer<typeof contactFormSchema>)
       </p>
     `
 
-    // Enviar email
     console.log('📧 Tentando enviar email via Resend...')
     console.log('RESEND_API_KEY configurada:', !!process.env.RESEND_API_KEY)
     
