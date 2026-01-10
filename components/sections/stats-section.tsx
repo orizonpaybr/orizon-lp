@@ -17,8 +17,8 @@ const stats = [
   },
   {
     icon: <HiTrendingUp size={48} />,
-    value: 700,
-    suffix: ' mil',
+    value: 4,
+    suffix: ' milhões',
     prefix: '',
     label: 'transações por dia',
   },

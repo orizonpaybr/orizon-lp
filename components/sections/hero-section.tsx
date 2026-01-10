@@ -28,7 +28,7 @@ export function HeroSection() {
                 seu dinheiro girar mais rápido e com mais segurança.
               </p>
               <p>
-                São <strong className="text-dark">R$ 2 bilhões já transacionados</strong>{' '}
+                São <strong className="text-dark">R$ 17.8 bilhões já transacionados</strong>{' '}
                 para nossos clientes.
               </p>
             </div>
