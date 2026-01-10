@@ -10,7 +10,7 @@ import { useRef, useEffect, useState } from 'react';
 const stats = [
   {
     icon: <HiCurrencyDollar size={48} />,
-    value: 2,
+    value: 17.8,
     suffix: 'B',
     prefix: 'R$ ',
     label: 'transacionados',
