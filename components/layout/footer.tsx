@@ -69,6 +69,11 @@ export function Footer() {
                   Centro, Florianópolis, SC<br />
                   CEP: 88.015-100
                 </p>
+                <p className="text-sm text-gray-300 leading-relaxed mt-4">
+                  Av. Brigadeiro Faria Lima, 3400<br />
+                  Itaim Bibi, São Paulo, SP<br />
+                  CEP: 04538-132
+                </p>
               </div>
             </div>
 
