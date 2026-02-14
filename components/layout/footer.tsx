@@ -192,18 +192,18 @@ export function Footer() {
                   <h5 className="text-sm font-semibold mb-3 text-gray-300">E-mail</h5>
                   <div className="space-y-2">
                     <a 
-                      href="mailto:sac@orizonpay.io"
+                      href="mailto:sac@orizonpay.com"
                       className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors group"
                     >
                       <FaEnvelope className="text-xs group-hover:scale-110 transition-transform" />
-                      sac@orizonpay.io
+                      sac@orizonpay.com
                     </a>
                     <a 
-                      href="mailto:comercial@orizonpay.io"
+                      href="mailto:comercial@orizonpay.com"
                       className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors group"
                     >
                       <FaEnvelope className="text-xs group-hover:scale-110 transition-transform" />
-                      comercial@orizonpay.io
+                      comercial@orizonpay.com
                     </a>
                   </div>
                 </div>
