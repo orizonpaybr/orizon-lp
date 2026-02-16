@@ -10,14 +10,29 @@ const CREDIBILITY_LOGOS = [
   {
     src: '/LogoABFINTECHS_Logo.png',
     alt: 'Membro Associado ABFINTECHS - Associação Brasileira de Fintechs',
-    href: 'https://abfintechs.org.br/',
+    href: 'https://abfintechs.com.br/quem-somos',
   },
   {
     src: '/LogoGreatPlace_Logo.png',
     alt: 'Great Place to Work - Certificada Abr/2025 - Abr/2026 Brasil',
-    href: 'https://greatplacetowork.com.br/',
+    href: 'https://gptw.com.br',
   },
-  { src: '/LogoLogo_B3.png', alt: 'B3', href: 'https://www.b3.com.br/' },
+  { src: '/LogoLogo_B3.png', alt: 'B3', href: 'https://www.b3.com.br' },
+  {
+    src: '/LogoAICPA_Logo.png',
+    alt: 'AICPA SOC Type II - Relatório de controles em organizações de serviço',
+    href: 'https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2',
+  },
+  {
+    src: '/LogoBancoCentral_Logo.png',
+    alt: 'Regulado pelo Banco Central do Brasil',
+    href: 'https://www.bcb.gov.br/meubc/encontreinstituicao',
+  },
+  {
+    src: '/LogoISO27001_Logo.png',
+    alt: 'ISO 27001 Certified - Segurança da informação',
+    href: 'https://www.27001.pt',
+  },
 ]
 
 export function Footer() {
