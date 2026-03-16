@@ -71,7 +71,7 @@ export function Footer() {
           <div className="flex items-center justify-center gap-2">
             <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
             <p className="text-center text-sm font-medium">
-              Orizon é uma empresa autorizada pelo BACEN - Banco Central do
+              Coratri é uma empresa autorizada pelo BACEN - Banco Central do
               Brasil
             </p>
             <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
@@ -84,26 +84,19 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div className="lg:col-span-1">
               <div className="mb-6">
-                <h3 className="text-3xl font-bold mb-4 text-white">Orizon</h3>
+                <h3 className="text-3xl font-bold mb-4 text-white">Coratri</h3>
                 <div className="w-16 h-1 bg-accent rounded-full mb-6"></div>
               </div>
               <div className="space-y-3">
                 <p className="text-sm text-gray-300 leading-relaxed">
                   <span className="font-semibold text-white">
-                    Orizon pay instituição de pagamento Ltda
+                    Coratri IP S.A.
                   </span>
                 </p>
                 <p className="text-sm text-gray-300">
                   CNPJ: 63.095.227/0001-88
                 </p>
                 <p className="text-sm text-gray-300 leading-relaxed">
-                  Avenida - PREF OSMAR CUNHA, 416
-                  <br />
-                  Centro, Florianópolis, SC
-                  <br />
-                  CEP: 88.015-100
-                </p>
-                <p className="text-sm text-gray-300 leading-relaxed mt-4">
                   Av. Brigadeiro Faria Lima, 3400
                   <br />
                   Itaim Bibi, São Paulo, SP
@@ -227,18 +220,18 @@ export function Footer() {
                   </h5>
                   <div className="space-y-2">
                     <a
-                      href="mailto:sac@orizonpay.com"
+                      href="mailto:Sac@coratri.com"
                       className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors group"
                     >
                       <FaEnvelope className="text-xs group-hover:scale-110 transition-transform" />
-                      sac@orizonpay.com
+                      Sac@coratri.com
                     </a>
                     <a
-                      href="mailto:comercial@orizonpay.com"
+                      href="mailto:Comercial@coratri.com"
                       className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors group"
                     >
                       <FaEnvelope className="text-xs group-hover:scale-110 transition-transform" />
-                      comercial@orizonpay.com
+                      Comercial@coratri.com
                     </a>
                   </div>
                 </div>
@@ -278,8 +271,8 @@ export function Footer() {
         <Container>
           <div className="flex items-center justify-center">
             <p className="text-sm text-white text-center">
-              Orizon pay instituição de pagamento Ltda ©{' '}
-              {new Date().getFullYear()}. Todos os direitos reservados.
+              Coratri IP S.A. © {new Date().getFullYear()}. Todos os direitos
+              reservados.
             </p>
           </div>
         </Container>
