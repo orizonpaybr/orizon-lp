@@ -1,11 +1,9 @@
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
-// import Link from "next/link";
-// import { HiArrowLeft } from "react-icons/hi";
 
 export const metadata = {
-  title: "Política de Privacidade - Orizon",
-  description: "Política de privacidade da plataforma Orizon",
+  title: "Política de Privacidade - Coratri IP S.A.",
+  description: "Política de privacidade da plataforma Coratri IP S.A.",
 };
 
 export default function PrivacidadePage() {
@@ -13,61 +11,98 @@ export default function PrivacidadePage() {
     <div className="pt-20">
       <Section className="bg-gray-light py-16 md:py-24">
         <Container>
-          {/* <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary-hover transition-colors mb-8"
-          >
-            <HiArrowLeft size={20} />
-            Voltar para o início
-          </Link> */}
-
           <h1 className="text-4xl md:text-5xl font-bold text-dark mb-8">
             Política de Privacidade
           </h1>
 
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 prose max-w-none">
             <section className="mb-8">
+              <h2 className="text-2xl font-bold text-dark mb-4">
+                Proteção de Dados Pessoais
+              </h2>
               <p className="text-gray-700 leading-relaxed">
-                A Orizon Pay compromete-se, por si, seus prepostos e profissionais dedicados à prestação dos serviços, a realizar o tratamento dos dados pessoais a que vier a ter acesso por força deste Contrato (&quot;Dados Pessoais&quot;), sempre em atenção às melhores práticas de mercado, assim como ao disposto na Lei nº 13.709/2018 (&quot;Lei Geral de Proteção de Dados Pessoais&quot; ou &quot;LGPD&quot;), no Marco Civil da Internet e na Política de Privacidade do cliente, respeitadas as finalidades ali descritas, bem como a envidar seus melhores esforços na proteção dos Dados Pessoais, em especial os Dados Pessoais sensíveis.
+                A Coratri IP S.A. compromete-se, por si, seus prepostos e profissionais dedicados à prestação dos serviços, a realizar o tratamento dos dados pessoais a que vier a ter acesso por força deste Contrato (&quot;Dados Pessoais&quot;), sempre em conformidade com as melhores práticas de mercado, bem como com o disposto na Lei nº 13.709/2018 (Lei Geral de Proteção de Dados Pessoais – LGPD), no Marco Civil da Internet e na Política de Privacidade do cliente, respeitadas as finalidades ali descritas, envidando seus melhores esforços para garantir a proteção dos Dados Pessoais, especialmente aqueles classificados como Dados Pessoais sensíveis.
               </p>
             </section>
 
             <div className="border-t border-gray-300 my-8"></div>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-dark mb-6">Compromissos da Orizon Pay</h2>
-              
-              <p className="text-gray-700 leading-relaxed mb-4">
-                A Orizon Pay se compromete a:
+              <h2 className="text-2xl font-bold text-dark mb-6">
+                Compromissos da Coratri IP S.A.
+              </h2>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                A Coratri IP S.A. compromete-se a:
               </p>
 
-              <ul className="list-disc list-inside text-gray-700 space-y-3">
-                <li>
-                  Realizar o tratamento dos Dados Pessoais somente segundo as instruções do cliente, de acordo com a autorização recebida e para a finalidade exclusiva de execução deste Contrato, sendo vedadas a comercialização e o compartilhamento com terceiros, exceto em casos expressamente autorizados e nas hipóteses previstas na legislação aplicável;
-                </li>
-                <li>
-                  Implementar medidas de segurança, técnicas e administrativas adequadas para garantir um nível de segurança efetivo à proteção dos Dados Pessoais contra acessos não autorizados e incidentes envolvendo destruição, perda, alteração, comunicação ou qualquer forma de tratamento inadequado ou ilícito;
-                </li>
-                <li>
-                  Colaborar com o cliente na efetivação dos direitos dos titulares dos Dados Pessoais quando solicitado, incluindo pedidos de acesso, correção, objeção, exclusão e portabilidade de dados, em consonância com a LGPD e demais legislação aplicável;
-                </li>
-                <li>
-                  Manter registros e comunicar ao cliente, sempre que solicitado, suas atividades de tratamento dos Dados Pessoais, incluindo registros de transferências internacionais e compartilhamento com terceiros;
-                </li>
-                <li>
-                  Comunicar imediatamente ao cliente, por escrito, em prazo não superior a 24 (vinte e quatro) horas do momento em que tomar conhecimento, sobre qualquer tratamento não autorizado ou ilícito dos Dados Pessoais, bem como sobre incidentes de segurança envolvendo Dados Pessoais, sejam estes acidentais ou não — incluindo acesso, aquisição, uso, alteração ou divulgação não autorizados, ou ainda vazamento, perda, destruição ou danos a Dados Pessoais, efetivo ou potencial —, além de adotar todas as medidas necessárias para eliminar ou conter o incidente e manter o cliente informado das medidas de correção e impactos decorrentes;
-                </li>
-                <li>
-                  Permitir e cooperar com investigações de incidentes, realizadas pelo cliente ou por terceiros contratados por ele, de forma a possibilitar ao cliente o cumprimento de suas obrigações relativas à segurança dos Dados Pessoais, inclusive através da implementação de medidas corretivas, avaliações de impacto de risco e resposta às autoridades competentes.
-                </li>
-              </ul>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-xl font-bold text-dark mb-3">
+                    1. Tratamento conforme instruções
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Realizar o tratamento dos Dados Pessoais exclusivamente de acordo com as instruções do cliente, conforme a autorização recebida e para a finalidade específica de execução deste Contrato, sendo vedada a comercialização ou compartilhamento com terceiros, salvo nos casos expressamente autorizados pelo cliente ou nas hipóteses previstas na legislação aplicável.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-dark mb-3">
+                    2. Medidas de segurança
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Implementar medidas de segurança técnicas e administrativas adequadas para garantir um nível de proteção eficaz aos Dados Pessoais, prevenindo acessos não autorizados e situações acidentais ou ilícitas de destruição, perda, alteração, comunicação ou qualquer forma de tratamento inadequado.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-dark mb-3">
+                    3. Atendimento aos direitos dos titulares
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Colaborar com o cliente no atendimento às solicitações dos titulares dos Dados Pessoais, incluindo pedidos de acesso, correção, objeção, exclusão e portabilidade, em conformidade com a LGPD e demais normas aplicáveis.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-dark mb-3">
+                    4. Registros de tratamento
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Manter registros das atividades de tratamento de Dados Pessoais e disponibilizá-los ao cliente sempre que solicitado, incluindo informações sobre transferências internacionais e compartilhamento com terceiros.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-dark mb-3">
+                    5. Comunicação de incidentes
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-3">
+                    Comunicar imediatamente ao cliente, por escrito, no prazo máximo de 24 (vinte e quatro) horas a partir do momento em que tomar conhecimento, qualquer tratamento não autorizado ou ilícito de Dados Pessoais, bem como incidentes de segurança envolvendo tais dados — sejam eles acidentais ou intencionais — incluindo acesso, aquisição, uso, alteração ou divulgação não autorizada, vazamento, perda, destruição ou dano, efetivo ou potencial.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    Além disso, a Coratri IP S.A. compromete-se a adotar todas as medidas necessárias para conter ou eliminar o incidente e manter o cliente informado sobre as ações corretivas adotadas e seus impactos.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-bold text-dark mb-3">
+                    6. Cooperação em investigações
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Permitir e cooperar com eventuais investigações relacionadas a incidentes de segurança conduzidas pelo cliente ou por terceiros por ele contratados, a fim de possibilitar o cumprimento das obrigações legais e regulatórias relativas à proteção de Dados Pessoais, incluindo avaliações de impacto, implementação de medidas corretivas e comunicação às autoridades competentes.
+                  </p>
+                </div>
+              </div>
             </section>
 
             <div className="border-t border-gray-300 my-8"></div>
 
             <section className="mb-8">
+              <h2 className="text-2xl font-bold text-dark mb-4">
+                Vigência das obrigações
+              </h2>
               <p className="text-gray-700 leading-relaxed">
-                As obrigações desta cláusula permanecem válidas mesmo após o término do Contrato, enquanto o cliente e as pessoas por ele autorizadas mantiverem ou realizarem qualquer forma de tratamento de Dados Pessoais obtidos e/ou coletados em função da execução deste Contrato.
+                As obrigações previstas nesta cláusula permanecerão válidas mesmo após o término ou rescisão deste Contrato, enquanto o cliente ou pessoas por ele autorizadas mantiverem ou realizarem qualquer forma de tratamento de Dados Pessoais obtidos ou coletados em decorrência da execução deste instrumento contratual.
               </p>
             </section>
           </div>

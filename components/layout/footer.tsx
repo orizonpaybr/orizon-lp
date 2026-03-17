@@ -185,7 +185,7 @@ export function Footer() {
                   </h5>
                   <div className="flex gap-4">
                     <a
-                      href="https://www.facebook.com/profile.php?id=61581862817153"
+                      href="https://www.facebook.com/share/1CDfSMrny5/?mibextid=wwXIfr"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 group"
@@ -194,7 +194,7 @@ export function Footer() {
                       <FaFacebook className="text-primary group-hover:text-white" />
                     </a>
                     <a
-                      href="https://www.instagram.com/orizon.pay?igsh=MTQ0N3IycXpsbWhtdg%3D%3D&utm_source=qr"
+                      href="https://www.instagram.com/coratri.inc?igsh=MW1iMjNxd3k1bHE2NA%3D%3D&utm_source=qr"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-accent hover:scale-110 transition-all duration-300 group"
@@ -224,14 +224,14 @@ export function Footer() {
                       className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors group"
                     >
                       <FaEnvelope className="text-xs group-hover:scale-110 transition-transform" />
-                      Sac@coratri.com
+                      sac@coratri.com
                     </a>
                     <a
                       href="mailto:Comercial@coratri.com"
                       className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors group"
                     >
                       <FaEnvelope className="text-xs group-hover:scale-110 transition-transform" />
-                      Comercial@coratri.com
+                      comercial@coratri.com
                     </a>
                   </div>
                 </div>
