@@ -65,16 +65,16 @@ export function Footer() {
   }, [])
 
   return (
-    <footer className="bg-dark text-white relative overflow-hidden">
+    <footer className="bg-dark text-foreground relative overflow-hidden">
       <div className="bg-accent py-4 relative z-10">
         <Container>
           <div className="flex items-center justify-center gap-2">
-            <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-inverse rounded-full animate-pulse"></div>
             <p className="text-center text-sm font-medium">
               Coratri é uma empresa autorizada pelo BACEN - Banco Central do
               Brasil
             </p>
-            <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+            <div className="w-2 h-2 bg-inverse rounded-full animate-pulse"></div>
           </div>
         </Container>
       </div>
@@ -84,19 +84,19 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <div className="lg:col-span-1">
               <div className="mb-6">
-                <h3 className="text-3xl font-bold mb-4 text-white">Coratri</h3>
+                <h3 className="text-3xl font-bold mb-4 text-foreground">Coratri</h3>
                 <div className="w-16 h-1 bg-accent rounded-full mb-6"></div>
               </div>
               <div className="space-y-3">
-                <p className="text-sm text-gray-300 leading-relaxed">
-                  <span className="font-semibold text-white">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-semibold text-foreground">
                     Coratri IP S.A.
                   </span>
                 </p>
-                <p className="text-sm text-gray-300">
+                <p className="text-sm text-muted-foreground">
                   CNPJ: 63.095.227/0001-88
                 </p>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Av. Brigadeiro Faria Lima, 3400
                   <br />
                   Itaim Bibi, São Paulo, SP
@@ -107,12 +107,12 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xl font-bold mb-6 text-white">Menu</h4>
+              <h4 className="text-xl font-bold mb-6 text-foreground">Menu</h4>
               <ul className="space-y-4">
                 <li>
                   <Link
                     href="#inicio"
-                    className="text-sm text-gray-300 hover:text-accent transition-all duration-300 hover:translate-x-1 inline-block"
+                    className="text-sm text-muted-foreground hover:text-accent transition-all duration-300 hover:translate-x-1 inline-block"
                   >
                     Início
                   </Link>
@@ -120,7 +120,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="#o-que-fazemos"
-                    className="text-sm text-gray-300 hover:text-accent transition-all duration-300 hover:translate-x-1 inline-block"
+                    className="text-sm text-muted-foreground hover:text-accent transition-all duration-300 hover:translate-x-1 inline-block"
                   >
                     O que fazemos?
                   </Link>
@@ -128,7 +128,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="#solucoes"
-                    className="text-sm text-gray-300 hover:text-accent transition-all duration-300 hover:translate-x-1 inline-block"
+                    className="text-sm text-muted-foreground hover:text-accent transition-all duration-300 hover:translate-x-1 inline-block"
                   >
                     Soluções
                   </Link>
@@ -136,7 +136,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/termos"
-                    className="text-sm text-gray-300 hover:text-accent transition-all duration-300 hover:translate-x-1 inline-block"
+                    className="text-sm text-muted-foreground hover:text-accent transition-all duration-300 hover:translate-x-1 inline-block"
                   >
                     Termos de Uso
                   </Link>
@@ -144,7 +144,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="/privacidade"
-                    className="text-sm text-gray-300 hover:text-accent transition-all duration-300 hover:translate-x-1 inline-block"
+                    className="text-sm text-muted-foreground hover:text-accent transition-all duration-300 hover:translate-x-1 inline-block"
                   >
                     Política de Privacidade
                   </Link>
@@ -153,11 +153,11 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xl font-bold mb-6 text-white">Ouvidoria</h4>
+              <h4 className="text-xl font-bold mb-6 text-foreground">Ouvidoria</h4>
               <div className="space-y-4">
                 <Link
                   href="/ouvidoria"
-                  className="inline-flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-all duration-300 group"
+                  className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-all duration-300 group"
                 >
                   <FaEnvelope className="group-hover:scale-110 transition-transform" />
                   Abrir uma Reclamação
@@ -177,10 +177,10 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="text-xl font-bold mb-6 text-white">Contato</h4>
+              <h4 className="text-xl font-bold mb-6 text-foreground">Contato</h4>
               <div className="space-y-6">
                 <div>
-                  <h5 className="text-sm font-semibold mb-4 text-gray-300">
+                  <h5 className="text-sm font-semibold mb-4 text-muted-foreground">
                     Redes Sociais
                   </h5>
                   <div className="flex gap-4">
@@ -215,20 +215,20 @@ export function Footer() {
                 </div>
 
                 <div>
-                  <h5 className="text-sm font-semibold mb-3 text-gray-300">
+                  <h5 className="text-sm font-semibold mb-3 text-muted-foreground">
                     E-mail
                   </h5>
                   <div className="space-y-2">
                     <a
                       href="mailto:Sac@coratri.com"
-                      className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors group"
+                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors group"
                     >
                       <FaEnvelope className="text-xs group-hover:scale-110 transition-transform" />
                       sac@coratri.com
                     </a>
                     <a
                       href="mailto:Comercial@coratri.com"
-                      className="flex items-center gap-2 text-sm text-gray-300 hover:text-accent transition-colors group"
+                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors group"
                     >
                       <FaEnvelope className="text-xs group-hover:scale-110 transition-transform" />
                       comercial@coratri.com
@@ -240,7 +240,7 @@ export function Footer() {
           </div>
 
           <div className="mt-16 pt-12 border-t border-white/10">
-            <p className="text-sm text-gray-400 text-center mb-8">
+            <p className="text-sm text-muted text-center mb-8">
               Certificações e Parcerias
             </p>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
@@ -270,7 +270,7 @@ export function Footer() {
       <div className="bg-primary py-6 relative z-10">
         <Container>
           <div className="flex items-center justify-center">
-            <p className="text-sm text-white text-center">
+            <p className="text-sm text-foreground text-center">
               Coratri IP S.A. © {new Date().getFullYear()}. Todos os direitos
               reservados.
             </p>

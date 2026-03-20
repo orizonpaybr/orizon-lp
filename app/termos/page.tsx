@@ -9,7 +9,7 @@ export const metadata = {
 export default function TermosPage() {
   return (
     <div className="pt-20">
-      <Section className="bg-gray-light py-16 md:py-24">
+      <Section className="bg-white py-16 md:py-24">
         <Container>
           <h1 className="text-4xl md:text-5xl font-bold text-dark mb-4">
             Termos de Uso

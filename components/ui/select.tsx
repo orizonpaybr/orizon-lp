@@ -1,8 +1,8 @@
-import { SelectHTMLAttributes, forwardRef } from 'react';
+import { SelectHTMLAttributes, forwardRef } from 'react'
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
-  error?: string;
-  options: { value: string; label: string }[];
+  error?: string
+  options: { value: string; label: string }[]
 }
 
 export const Select = forwardRef<HTMLSelectElement, SelectProps>(
@@ -13,10 +13,10 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
           <select
             ref={ref}
             className={`
-              w-full pl-4 pr-12 py-3 border rounded-md bg-white appearance-none
+              w-full pl-4 pr-12 py-3 border rounded-md bg-surface text-foreground appearance-none
               focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
               transition-all duration-200 cursor-pointer
-              ${error ? 'border-red-500' : 'border-gray-300'}
+              ${error ? 'border-red-500' : 'border-border'}
               ${className}
             `}
             {...props}
@@ -27,11 +27,10 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
               </option>
             ))}
           </select>
-          
-          {/* Custom dropdown icon */}
+
           <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none">
             <svg
-              className="w-5 h-5 text-gray-400"
+              className="w-5 h-5 text-muted"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -45,15 +44,11 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
             </svg>
           </div>
         </div>
-        
-        {error && (
-          <p className="mt-1 text-sm text-red-500">{error}</p>
-        )}
+
+        {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
       </div>
-    );
-  }
-);
+    )
+  },
+)
 
-Select.displayName = 'Select';
-
-
+Select.displayName = 'Select'

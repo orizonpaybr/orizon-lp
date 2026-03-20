@@ -10,9 +10,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
     
     const variants = {
-      primary: 'bg-accent hover:bg-accent-hover text-white shadow-md hover:shadow-lg',
-      secondary: 'bg-primary hover:bg-primary-hover text-white shadow-md hover:shadow-lg',
-      outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-white'
+      primary: 'bg-primary hover:bg-primary-hover text-inverse shadow-md hover:shadow-lg',
+      secondary: 'bg-accent hover:bg-accent-hover text-inverse shadow-md hover:shadow-lg',
+      outline: 'border-2 border-primary text-primary hover:bg-primary hover:text-inverse',
     };
     
     const sizes = {

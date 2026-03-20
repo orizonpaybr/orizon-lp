@@ -17,7 +17,7 @@ const mediaLogos = [
 
 export function MediaSection() {
   return (
-    <Section className="py-10 md:py-20 bg-white w-full">
+    <Section className="py-10 md:py-20 bg-background w-full">
       <div className="w-full px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -26,8 +26,8 @@ export function MediaSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-dark">
-            Orizon na mídia
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            Coratri na mídia
           </h2>
         </motion.div>
 

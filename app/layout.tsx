@@ -13,9 +13,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Orizon - O Futuro dos Pagamentos para Empresas",
-  description: "Seja no PIX, no cartão ou no link de pagamento, a Orizon é a solução que faz seu dinheiro girar mais rápido e com mais segurança.",
+  title: "Coratri - O Futuro dos Pagamentos para Empresas",
+  description: "Seja no PIX, no cartão ou no link de pagamento, a Coratri é a solução que faz seu dinheiro girar mais rápido e com mais segurança.",
   keywords: "pagamentos, pix, cartão, gateway de pagamento, checkout transparente, link de pagamento",
+  icons: {
+    icon: "/Favicon - Branca.png",
+    shortcut: "/Favicon - Branca.png",
+    apple: "/Favicon - Branca.png",
+  },
 };
 
 export default function RootLayout({

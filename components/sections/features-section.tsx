@@ -1,14 +1,14 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
-import { 
-  MdAccountBalanceWallet, 
-  MdCreditCard, 
-  MdLink, 
-  MdShoppingCart 
-} from 'react-icons/md';
-import { Container } from '../ui/container';
-import { Section } from '../ui/section';
+import { motion } from 'framer-motion'
+import {
+  MdAccountBalanceWallet,
+  MdCreditCard,
+  MdLink,
+  MdShoppingCart,
+} from 'react-icons/md'
+import { Container } from '../ui/container'
+import { Section } from '../ui/section'
 
 const features = [
   {
@@ -31,14 +31,16 @@ const features = [
     title: 'Checkout transparente',
     description: 'Sem redirecionamentos, sem fricção.',
   },
-];
+]
 
 export function FeaturesSection() {
   return (
-    <Section id="o-que-fazemos" className="py-10 md:py-20 bg-gradient-to-br from-accent to-accent-hover">
+    <Section
+      id="o-que-fazemos"
+      className="py-10 md:py-20 bg-gradient-to-br from-accent-start to-accent-end"
+    >
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
-          {/* Title */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -46,15 +48,14 @@ export function FeaturesSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               O que fazemos?
             </h2>
-            <p className="text-white/90 text-lg">
+            <p className="text-muted-foreground text-lg">
               Conectamos sua empresa ao que há de mais moderno em pagamentos:
             </p>
           </motion.div>
 
-          {/* Features Grid */}
           <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {features.map((feature, index) => (
               <motion.div
@@ -63,17 +64,18 @@ export function FeaturesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-surface rounded-xl p-6 border border-border shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="text-accent mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-dark mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl font-bold text-foreground mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-muted">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </Container>
     </Section>
-  );
+  )
 }
-

@@ -1,39 +1,42 @@
-'use client';
+'use client'
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { Container } from '../ui/container';
-import { Section } from '../ui/section';
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { Container } from '../ui/container'
+import { Section } from '../ui/section'
 
 export function HeroSection() {
   return (
-    <Section id="inicio" className="pt-32 bg-gray-light min-h-[600px]">
+    <Section id="inicio" className="pt-32 bg-background min-h-[600px]">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className="overflow-hidden"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark mb-12">
-              O <span className="text-accent">Futuro</span> dos Pagamentos para Empresas
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-12">
+              O <span className="text-accent">Futuro</span> dos Pagamentos para
+              Empresas
             </h1>
-            
-            <div className="space-y-4 text-lg text-gray-700 mb-8">
+
+            <div className="space-y-4 text-lg text-muted-foreground mb-8">
               <p>
                 Seja no PIX, no cartão ou no link de pagamento, a{' '}
-                <strong className="text-primary">Orizon</strong> é a solução que faz
-                seu dinheiro girar mais rápido e com mais segurança.
+                <strong className="text-primary">Coratri</strong> é a solução
+                que faz seu dinheiro girar mais rápido e com mais segurança.
               </p>
               <p>
-                São <strong className="text-dark">R$ 17.8 bilhões já transacionados</strong>{' '}
+                São{' '}
+                <strong className="text-foreground">
+                  R$ 17.8 bilhões já transacionados
+                </strong>{' '}
                 para nossos clientes.
               </p>
             </div>
 
-            <p className="text-2xl font-semibold text-dark">
+            <p className="text-2xl font-semibold text-foreground">
               Agora é a sua vez de crescer!
             </p>
           </motion.div>
@@ -43,36 +46,36 @@ export function HeroSection() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative h-[470px] md:h-[600px] lg:h-[700px] overflow-hidden"
+            className="relative h-[470px] md:h-[600px] lg:h-[700px]"
           >
             <Image
-              src="/images/banner-foto-inicial.png"
+              src="/images/Elemento - Pessoa 01.png"
               alt="Mulher feliz recebendo notificações de pagamento"
               fill
-              className="object-contain scale-125"
+              className="object-contain object-bottom"
               priority
             />
-            
+
             {/* Notification Card 1 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ 
-                opacity: 1, 
-                y: [0, -10, 0]
+              animate={{
+                opacity: 1,
+                y: [0, -10, 0],
               }}
-              transition={{ 
-                duration: 0.5, 
+              transition={{
+                duration: 0.5,
                 delay: 0.8,
                 y: {
                   duration: 2,
                   repeat: Infinity,
-                  ease: "easeInOut"
-                }
+                  ease: 'easeInOut',
+                },
               }}
               className="absolute bottom-24 left-8 md:top-16 md:left-8 w-[280px] md:w-[280px]"
             >
               <Image
-                src="/images/note-recebido.png"
+                src="/images/Elemento Banner 01.png"
                 alt="Notificação de pagamento recebido"
                 width={280}
                 height={120}
@@ -83,23 +86,23 @@ export function HeroSection() {
             {/* Notification Card 2 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ 
-                opacity: 1, 
-                y: [0, -8, 0]
+              animate={{
+                opacity: 1,
+                y: [0, -8, 0],
               }}
-              transition={{ 
-                duration: 0.5, 
+              transition={{
+                duration: 0.5,
                 delay: 1,
                 y: {
                   duration: 2.5,
                   repeat: Infinity,
-                  ease: "easeInOut"
-                }
+                  ease: 'easeInOut',
+                },
               }}
               className="absolute bottom-2 left-8 md:bottom-24 md:left-12 w-[280px] md:w-[280px]"
             >
               <Image
-                src="/images/note-recebido-2.png"
+                src="/images/Elemento Banner 02.png"
                 alt="Notificação de pagamento recebido"
                 width={280}
                 height={120}
@@ -107,21 +110,20 @@ export function HeroSection() {
               />
             </motion.div>
 
-            {/* Bell Notification Icon */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ 
-                opacity: 1, 
-                scale: [1, 1.1, 1]
+              animate={{
+                opacity: 1,
+                scale: [1, 1.1, 1],
               }}
-              transition={{ 
-                duration: 0.5, 
+              transition={{
+                duration: 0.5,
                 delay: 1.2,
                 scale: {
                   duration: 1.5,
                   repeat: Infinity,
-                  ease: "easeInOut"
-                }
+                  ease: 'easeInOut',
+                },
               }}
               className="absolute top-8 right-16 w-12 h-12"
             >
@@ -137,6 +139,5 @@ export function HeroSection() {
         </div>
       </Container>
     </Section>
-  );
+  )
 }
-

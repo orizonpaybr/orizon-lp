@@ -14,14 +14,14 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
             ref={ref}
             type="checkbox"
             className={`
-              mt-1 w-5 h-5 text-primary border-gray-300 rounded
+              mt-1 w-5 h-5 text-primary border-border bg-surface rounded
               focus:ring-2 focus:ring-primary cursor-pointer
               ${error ? 'border-red-500' : ''}
               ${className}
             `}
             {...props}
           />
-          <span className="text-sm text-gray-700">{label}</span>
+          <span className="text-sm text-muted-foreground">{label}</span>
         </label>
         {error && (
           <p className="mt-1 text-sm text-red-500">{error}</p>

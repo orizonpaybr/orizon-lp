@@ -10,6 +10,12 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        surface: "var(--surface)",
+        "surface-alt": "var(--surface-alt)",
+        muted: "var(--muted)",
+        "muted-foreground": "var(--muted-foreground)",
+        border: "var(--border)",
+        inverse: "var(--inverse)",
         primary: {
           DEFAULT: "var(--primary)",
           hover: "var(--primary-hover)",
@@ -22,6 +28,8 @@ module.exports = {
         accent: {
           DEFAULT: "var(--accent)",
           hover: "var(--accent-hover)",
+          start: "var(--accent-start)",
+          end: "var(--accent-end)",
         },
         dark: {
           DEFAULT: "var(--dark)",

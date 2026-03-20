@@ -1,21 +1,21 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import { useForm, Controller } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import toast from 'react-hot-toast';
-import { Container } from '../ui/container';
-import { Section } from '../ui/section';
-import { Input } from '../ui/input';
-import { Select } from '../ui/select';
-import { IMaskInput } from 'react-imask';
-import { Textarea } from '../ui/textarea';
-import { Checkbox } from '../ui/checkbox';
-import { Button } from '../ui/button';
-import { contactFormSchema, ContactFormValues } from '@/lib/validations';
-import { submitContactForm } from '@/app/actions/contact';
+import { useState } from 'react'
+import { useForm, Controller } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import toast from 'react-hot-toast'
+import { Container } from '../ui/container'
+import { Section } from '../ui/section'
+import { Input } from '../ui/input'
+import { Select } from '../ui/select'
+import { IMaskInput } from 'react-imask'
+import { Textarea } from '../ui/textarea'
+import { Checkbox } from '../ui/checkbox'
+import { Button } from '../ui/button'
+import { contactFormSchema, ContactFormValues } from '@/lib/validations'
+import { submitContactForm } from '@/app/actions/contact'
 
 const volumeOptions = [
   { value: '', label: 'Selecione' },
@@ -24,10 +24,10 @@ const volumeOptions = [
   { value: '50k-100k', label: 'R$50.000 - R$100.000 Por mês' },
   { value: '100k-500k', label: 'R$100.000 - R$500.000 Por mês' },
   { value: 'above-500k', label: 'Acima de R$500.000 Por mês' },
-];
+]
 
 export function ContactSection() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const {
     register,
@@ -38,32 +38,36 @@ export function ContactSection() {
     trigger,
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
-  });
+  })
 
   const onSubmit = async (data: ContactFormValues) => {
-    setIsSubmitting(true);
-    
+    setIsSubmitting(true)
+
     try {
-      const result = await submitContactForm(data);
+      const result = await submitContactForm(data)
 
       if (result.success) {
-        console.log('Email enviado com sucesso:', result);
-        toast.success('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-        reset();
+        console.log('Email enviado com sucesso:', result)
+        toast.success(
+          'Mensagem enviada com sucesso! Entraremos em contato em breve.',
+        )
+        reset()
       } else {
-        toast.error(result.error || 'Erro ao enviar mensagem. Tente novamente.');
+        toast.error(result.error || 'Erro ao enviar mensagem. Tente novamente.')
       }
     } catch (error) {
-      console.error('Erro ao enviar email:', error);
-      toast.error('Erro ao enviar mensagem. Tente novamente.');
+      console.error('Erro ao enviar email:', error)
+      toast.error('Erro ao enviar mensagem. Tente novamente.')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  }
 
   return (
-    <Section id="contato" className="py-10 md:py-20 bg-gray-light relative overflow-hidden">
-      {/* Background Image - Full Width - Hidden on Mobile */}
+    <Section
+      id="contato"
+      className="py-10 md:py-20 bg-background relative overflow-hidden"
+    >
       <div className="absolute inset-0 w-full h-full hidden md:block">
         <Image
           src="/images/form-bg3.png"
@@ -71,13 +75,11 @@ export function ContactSection() {
           fill
           className="object-contain object-left"
         />
-        {/* Overlay para melhorar legibilidade do texto */}
-        <div className="absolute inset-0 bg-white/60 md:bg-white/50"></div>
+        <div className="absolute inset-0 bg-dark/70 md:bg-dark/60"></div>
       </div>
 
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start min-h-[500px]">
-          {/* Form Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -85,27 +87,28 @@ export function ContactSection() {
             transition={{ duration: 0.6 }}
             className="flex flex-col justify-center p-8 max-w-md ml-8 md:ml-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Pronto para vender mais e receber mais rápido?
             </h2>
-            <p className="text-lg text-gray-700 mb-4">
+            <p className="text-lg text-muted-foreground mb-4">
               Fale com um especialista agora e revolucione seus pagamentos!
             </p>
           </motion.div>
 
-          {/* Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-2xl shadow-xl p-6 h-fit"
+            className="bg-surface border border-border rounded-2xl shadow-xl p-6 h-fit"
           >
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-              {/* Name Fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-dark mb-2">
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-medium text-muted-foreground mb-2"
+                  >
                     Nome <span className="text-red-500">*</span>
                   </label>
                   <Input
@@ -116,7 +119,10 @@ export function ContactSection() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-dark mb-2">
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-medium text-muted-foreground mb-2"
+                  >
                     Sobrenome <span className="text-red-500">*</span>
                   </label>
                   <Input
@@ -128,9 +134,11 @@ export function ContactSection() {
                 </div>
               </div>
 
-              {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-dark mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-muted-foreground mb-2"
+                >
                   Email <span className="text-red-500">*</span>
                 </label>
                 <Input
@@ -142,9 +150,11 @@ export function ContactSection() {
                 />
               </div>
 
-              {/* Phone */}
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-dark mb-2">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-muted-foreground mb-2"
+                >
                   DDD + Telefone <span className="text-red-500">*</span>
                 </label>
                 <div className="w-full">
@@ -161,37 +171,41 @@ export function ContactSection() {
                         placeholder="(11) 99999-9999"
                         autoComplete="tel"
                         onAccept={(value) => {
-                          field.onChange(value);
+                          field.onChange(value)
                           // Trigger validação após atualizar o valor (captura autocomplete também)
                           setTimeout(() => {
-                            trigger('phone');
-                          }, 0);
+                            trigger('phone')
+                          }, 0)
                         }}
                         onBlur={(e) => {
-                          field.onBlur();
+                          field.onBlur()
                           // Força validação ao perder o foco (importante para autocomplete do navegador)
                           setTimeout(() => {
-                            trigger('phone');
-                          }, 100);
+                            trigger('phone')
+                          }, 100)
                         }}
                         className={`
-                          w-full px-4 py-3 border rounded-md bg-white
+                          w-full px-4 py-3 border rounded-md bg-surface text-foreground placeholder:text-muted
                           focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
                           transition-all duration-200
-                          ${errors.phone ? 'border-red-500' : 'border-gray-300'}
+                          ${errors.phone ? 'border-red-500' : 'border-border'}
                         `}
                       />
                     )}
                   />
                   {errors.phone && (
-                    <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.phone.message}
+                    </p>
                   )}
                 </div>
               </div>
 
-              {/* Company */}
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-dark mb-2">
+                <label
+                  htmlFor="company"
+                  className="block text-sm font-medium text-muted-foreground mb-2"
+                >
                   Empresa <span className="text-red-500">*</span>
                 </label>
                 <Input
@@ -202,9 +216,11 @@ export function ContactSection() {
                 />
               </div>
 
-              {/* Website */}
               <div>
-                <label htmlFor="website" className="block text-sm font-medium text-dark mb-2">
+                <label
+                  htmlFor="website"
+                  className="block text-sm font-medium text-muted-foreground mb-2"
+                >
                   Site da Empresa <span className="text-red-500">*</span>
                 </label>
                 <Input
@@ -216,9 +232,11 @@ export function ContactSection() {
                 />
               </div>
 
-              {/* Volume */}
               <div>
-                <label htmlFor="volume" className="block text-sm font-medium text-dark mb-2">
+                <label
+                  htmlFor="volume"
+                  className="block text-sm font-medium text-muted-foreground mb-2"
+                >
                   Quantidade de Processamento (Volumetria de transações){' '}
                   <span className="text-red-500">*</span>
                 </label>
@@ -230,9 +248,11 @@ export function ContactSection() {
                 />
               </div>
 
-              {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-dark mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-muted-foreground mb-2"
+                >
                   Como Podemos Ajudar? <span className="text-red-500">*</span>
                 </label>
                 <Textarea
@@ -244,7 +264,6 @@ export function ContactSection() {
                 />
               </div>
 
-              {/* Terms */}
               <Checkbox
                 id="acceptTerms"
                 {...register('acceptTerms')}
@@ -266,12 +285,10 @@ export function ContactSection() {
               >
                 {isSubmitting ? 'ENVIANDO...' : 'ENVIAR'}
               </Button>
-
             </form>
           </motion.div>
         </div>
       </Container>
     </Section>
-  );
+  )
 }
-

@@ -1,11 +1,11 @@
-'use client';
+'use client'
 
-import { motion, useInView } from 'framer-motion';
-import { HiCurrencyDollar, HiTrendingUp, HiLightningBolt } from 'react-icons/hi';
-import { Container } from '../ui/container';
-import { Section } from '../ui/section';
-import Image from 'next/image';
-import { useRef, useEffect, useState } from 'react';
+import { motion, useInView } from 'framer-motion'
+import { HiCurrencyDollar, HiTrendingUp, HiLightningBolt } from 'react-icons/hi'
+import { Container } from '../ui/container'
+import { Section } from '../ui/section'
+import Image from 'next/image'
+import { useRef, useEffect, useState } from 'react'
 
 const stats = [
   {
@@ -29,59 +29,67 @@ const stats = [
     prefix: '',
     label: 'de uptime',
   },
-];
+]
 
 // Componente para animação de contagem
-function CountUp({ end, duration = 2, prefix = '', suffix = '' }: { 
-  end: number; 
-  duration?: number; 
-  prefix?: string; 
-  suffix?: string; 
+function CountUp({
+  end,
+  duration = 2,
+  prefix = '',
+  suffix = '',
+}: {
+  end: number
+  duration?: number
+  prefix?: string
+  suffix?: string
 }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const [count, setCount] = useState(0)
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView) return
 
-    let startTime: number;
-    let animationFrame: number;
+    let startTime: number
+    let animationFrame: number
 
     const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / (duration * 1000), 1);
-      
-      setCount(progress * end);
+      if (!startTime) startTime = currentTime
+      const progress = Math.min(
+        (currentTime - startTime) / (duration * 1000),
+        1,
+      )
+
+      setCount(progress * end)
 
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
+        animationFrame = requestAnimationFrame(animate)
       }
-    };
+    }
 
-    animationFrame = requestAnimationFrame(animate);
+    animationFrame = requestAnimationFrame(animate)
 
     return () => {
       if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
+        cancelAnimationFrame(animationFrame)
       }
-    };
-  }, [isInView, end, duration]);
+    }
+  }, [isInView, end, duration])
 
   return (
     <span ref={ref}>
-      {prefix}{count.toFixed(count % 1 === 0 ? 0 : 1)}{suffix}
+      {prefix}
+      {count.toFixed(count % 1 === 0 ? 0 : 1)}
+      {suffix}
     </span>
-  );
+  )
 }
 
 export function StatsSection() {
   return (
-    <Section className="py-10 bg-dark text-white">
+    <Section className="py-10 bg-gradient-to-br from-accent-start to-accent-end text-foreground">
       <Container>
-        {/* Top Section - Title and Image */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
-          {/* Title */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -89,7 +97,8 @@ export function StatsSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              Números que comprovam nossa <span className="text-accent">força</span>
+              Números que comprovam nossa{' '}
+              <span className="text-accent">força</span>
             </h2>
           </motion.div>
 
@@ -102,7 +111,7 @@ export function StatsSection() {
             className="relative overflow-hidden flex items-center justify-center"
           >
             <Image
-              src="/images/foto-pessoa.png"
+              src="/images/Elemento - Pessoa 04.png"
               alt="Pessoa usando smartphone"
               width={800}
               height={1000}
@@ -120,31 +129,28 @@ export function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all"
+              className="bg-surface-alt/80 backdrop-blur-sm rounded-xl border border-border p-8 hover:bg-surface-alt transition-all"
             >
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                  <div className="text-dark">
-                    {stat.icon}
-                  </div>
+                <div className="w-16 h-16 bg-inverse rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="text-dark">{stat.icon}</div>
                 </div>
                 <div className="flex-1">
-                  <p className="text-4xl font-bold text-white mb-2">
-                    <CountUp 
-                      end={stat.value} 
-                      prefix={stat.prefix} 
+                  <p className="text-4xl font-bold text-foreground mb-2">
+                    <CountUp
+                      end={stat.value}
+                      prefix={stat.prefix}
                       suffix={stat.suffix}
                       duration={2}
                     />
                   </p>
-                  <p className="text-white/80 text-lg">{stat.label}</p>
+                  <p className="text-muted-foreground text-lg">{stat.label}</p>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Bottom Text */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -153,11 +159,11 @@ export function StatsSection() {
           className="text-center"
         >
           <p className="text-xl">
-            <strong className="text-accent">Orizon</strong> A escolha inteligente para empresas que não podem parar.
+            <strong className="text-accent">Coratri</strong> A escolha
+            inteligente para empresas que não podem parar.
           </p>
         </motion.div>
       </Container>
     </Section>
-  );
+  )
 }
-
