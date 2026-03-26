@@ -42,7 +42,7 @@ export function CardsSection() {
               </div>
 
               <Image
-                src="/images/Elemento - Celular 03.png"
+                src="/nova - Imagem - 03.png"
                 alt="App no celular mostrando pagamentos recebidos"
                 width={500}
                 height={600}

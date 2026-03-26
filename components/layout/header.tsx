@@ -45,13 +45,13 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-dark/95 border-b border-border backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 border-b border-gray-200 backdrop-blur-md">
       <Container>
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/orizon-logo.png"
+              src="/Logo - Branco.png"
               alt="Coratri"
               width={420}
               height={150}
@@ -66,7 +66,7 @@ export function Header() {
                 key={item.href}
                 href={getHref(item.href)}
                 onClick={(e) => handleSectionClick(e, item.href)}
-                className="text-foreground hover:text-primary transition-colors font-medium"
+                className="text-gray-800 hover:text-primary transition-colors font-medium"
               >
                 {item.label}
               </Link>
@@ -86,7 +86,7 @@ export function Header() {
           </div>
 
           <button
-            className="lg:hidden text-foreground p-2"
+            className="lg:hidden text-gray-800 p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -95,7 +95,7 @@ export function Header() {
         </div>
 
         {isMenuOpen && (
-          <nav className="lg:hidden py-4 border-t border-border">
+          <nav className="lg:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <Link
@@ -105,7 +105,7 @@ export function Header() {
                     handleSectionClick(e, item.href)
                     setIsMenuOpen(false)
                   }}
-                  className="text-foreground hover:text-primary transition-colors font-medium py-2"
+                  className="text-gray-800 hover:text-primary transition-colors font-medium py-2"
                 >
                   {item.label}
                 </Link>

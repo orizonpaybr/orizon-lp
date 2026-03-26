@@ -39,7 +39,7 @@ export function CheckoutSection() {
 
               <div className="relative z-10 mt-28 md:mt-36">
                 <Image
-                  src="/images/Elemento - Celular 02.png"
+                  src="/nova-Imagem - 02.png"
                   alt="Interface de checkout transparente em dispositivo móvel"
                   width={500}
                   height={750}

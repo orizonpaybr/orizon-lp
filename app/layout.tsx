@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   description: "Seja no PIX, no cartão ou no link de pagamento, a Coratri é a solução que faz seu dinheiro girar mais rápido e com mais segurança.",
   keywords: "pagamentos, pix, cartão, gateway de pagamento, checkout transparente, link de pagamento",
   icons: {
-    icon: "/Favicon - Branca.png",
-    shortcut: "/Favicon - Branca.png",
-    apple: "/Favicon - Branca.png",
+    icon: "/Favicon - Preto.png",
+    shortcut: "/Favicon - Preto.png",
+    apple: "/Favicon - Preto.png",
   },
 };
 

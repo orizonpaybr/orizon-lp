@@ -7,7 +7,7 @@ import { Section } from '../ui/section'
 
 export function HeroSection() {
   return (
-    <Section id="inicio" className="pt-32 bg-background min-h-[600px]">
+    <Section id="inicio" className="pt-32 bg-white min-h-[600px]">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -16,12 +16,12 @@ export function HeroSection() {
             transition={{ duration: 0.6 }}
             className="overflow-hidden"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-12">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-12">
               O <span className="text-accent">Futuro</span> dos Pagamentos para
               Empresas
             </h1>
 
-            <div className="space-y-4 text-lg text-muted-foreground mb-8">
+            <div className="space-y-4 text-lg text-gray-700 mb-8">
               <p>
                 Seja no PIX, no cartão ou no link de pagamento, a{' '}
                 <strong className="text-primary">Coratri</strong> é a solução
@@ -29,14 +29,14 @@ export function HeroSection() {
               </p>
               <p>
                 São{' '}
-                <strong className="text-foreground">
+                <strong className="text-gray-900">
                   R$ 17.8 bilhões já transacionados
                 </strong>{' '}
                 para nossos clientes.
               </p>
             </div>
 
-            <p className="text-2xl font-semibold text-foreground">
+            <p className="text-2xl font-semibold text-gray-900">
               Agora é a sua vez de crescer!
             </p>
           </motion.div>

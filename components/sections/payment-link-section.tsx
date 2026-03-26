@@ -65,7 +65,7 @@ export function PaymentLinkSection() {
             className="relative h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden"
           >
             <Image
-              src="/images/Elemento - Celular 01.png"
+              src="/nova - Imagem - 07.png"
               alt="Interface de link de pagamento no celular"
               fill
               className="object-contain drop-shadow-2xl"
