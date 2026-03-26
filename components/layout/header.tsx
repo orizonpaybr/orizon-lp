@@ -51,12 +51,12 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/Logo - Branco.png"
+              src="/Logo - Preto.png"
               alt="Coratri"
               width={420}
               height={150}
               priority
-              className="object-contain h-28 w-auto"
+              className="object-contain h-8 sm:h-9 md:h-10 lg:h-11 w-auto"
             />
           </Link>
 
