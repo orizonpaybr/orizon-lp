@@ -17,7 +17,6 @@ const CREDIBILITY_LOGOS = [
     alt: 'Great Place to Work - Certificada Abr/2025 - Abr/2026 Brasil',
     href: 'https://gptw.com.br',
   },
-  { src: '/LogoLogo_B3.png', alt: 'B3', href: 'https://www.b3.com.br' },
   {
     src: '/LogoAICPA_Logo.png',
     alt: 'AICPA SOC Type II - Relatório de controles em organizações de serviço',
