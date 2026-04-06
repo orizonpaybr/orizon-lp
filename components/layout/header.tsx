@@ -45,7 +45,7 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 border-b border-gray-200 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-100/95 border-b border-neutral-200/80 backdrop-blur-md">
       <Container>
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -95,7 +95,7 @@ export function Header() {
         </div>
 
         {isMenuOpen && (
-          <nav className="lg:hidden py-4 border-t border-gray-200">
+          <nav className="lg:hidden py-4 border-t border-neutral-200/80">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <Link

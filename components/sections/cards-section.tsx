@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { HiCheckCircle } from 'react-icons/hi'
+import { SiMastercard, SiPix, SiVisa } from 'react-icons/si'
 import { Container } from '../ui/container'
 import { Section } from '../ui/section'
 import { Button } from '../ui/button'
@@ -79,14 +80,30 @@ export function CardsSection() {
               Simples, rápido e sem surpresas. Faça parte da Coratri!
             </p>
 
-            {/* Card Brands */}
-            <div className="mb-8 flex justify-center lg:justify-start">
-              <Image
-                src="/images/bandeiras-300x234.png"
-                alt="Bandeiras de cartões de crédito e débito"
-                width={250}
-                height={195}
-                className="drop-shadow-lg"
+            <div
+              className="mb-8 flex flex-wrap items-center justify-center gap-10 sm:gap-12 lg:justify-start"
+              role="img"
+              aria-label="Formas de pagamento aceitas: Visa, Mastercard e Pix"
+            >
+              <SiVisa
+                size={72}
+                className="shrink-0 text-[#1434CB]"
+                aria-hidden
+              />
+              <div className="flex flex-col items-center gap-0">
+                <SiMastercard
+                  size={72}
+                  className="shrink-0 text-[#EB001B] block leading-none"
+                  aria-hidden
+                />
+                <span className="-mt-1 text-center text-[0.65rem] font-semibold lowercase leading-none tracking-tight text-foreground sm:text-xs sm:-mt-1.5">
+                  mastercard
+                </span>
+              </div>
+              <SiPix
+                size={72}
+                className="shrink-0 text-[#32BCAD]"
+                aria-hidden
               />
             </div>
 

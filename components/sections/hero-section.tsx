@@ -7,7 +7,7 @@ import { Section } from '../ui/section'
 
 export function HeroSection() {
   return (
-    <Section id="inicio" className="pt-32 bg-white min-h-[600px]">
+    <Section id="inicio" className="pt-32 bg-neutral-100 min-h-[600px]">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -17,8 +17,8 @@ export function HeroSection() {
             className="overflow-hidden"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-12">
-              O <span className="text-accent">Futuro</span> dos Pagamentos para
-              Empresas
+              A Infraestrutura que move o{' '}
+              <span className="text-accent">futuro</span> dos pagamentos.
             </h1>
 
             <div className="space-y-4 text-lg text-gray-700 mb-8">
@@ -28,11 +28,10 @@ export function HeroSection() {
                 que faz seu dinheiro girar mais rápido e com mais segurança.
               </p>
               <p>
-                São{' '}
                 <strong className="text-gray-900">
-                  R$ 17.8 bilhões já transacionados
+                  R$ 8,9 bilhões transacionados
                 </strong>{' '}
-                para nossos clientes.
+                por milhares de clientes que confiam na nossa infraestrutura.
               </p>
             </div>
 

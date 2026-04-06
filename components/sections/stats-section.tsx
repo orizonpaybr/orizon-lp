@@ -10,14 +10,14 @@ import { useRef, useEffect, useState } from 'react'
 const stats = [
   {
     icon: <HiCurrencyDollar size={48} />,
-    value: 17.8,
-    suffix: 'B',
+    value: 8.9,
+    suffix: ' bilhões',
     prefix: 'R$ ',
     label: 'transacionados',
   },
   {
     icon: <HiTrendingUp size={48} />,
-    value: 4,
+    value: 2.6,
     suffix: ' milhões',
     prefix: '',
     label: 'transações por dia',
@@ -76,10 +76,14 @@ function CountUp({
     }
   }, [isInView, end, duration])
 
+  const formatted = count
+    .toFixed(count % 1 === 0 ? 0 : 1)
+    .replace('.', ',')
+
   return (
     <span ref={ref}>
       {prefix}
-      {count.toFixed(count % 1 === 0 ? 0 : 1)}
+      {formatted}
       {suffix}
     </span>
   )

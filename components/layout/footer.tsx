@@ -92,9 +92,6 @@ export function Footer() {
                     Coratri IP S.A.
                   </span>
                 </p>
-                <p className="text-sm text-muted-foreground">
-                  CNPJ: 63.095.227/0001-88
-                </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Av. Brigadeiro Faria Lima, 3400
                   <br />
