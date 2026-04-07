@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import toast from 'react-hot-toast'
 import { Container } from '../ui/container'
 import { Section } from '../ui/section'
@@ -68,16 +67,6 @@ export function ContactSection() {
       id="contato"
       className="py-10 md:py-20 bg-background relative overflow-hidden"
     >
-      <div className="absolute inset-0 w-full h-full hidden md:block">
-        <Image
-          src="/images/form-bg3.png"
-          alt="Ilustração de formulário"
-          fill
-          className="object-contain object-left"
-        />
-        <div className="absolute inset-0 bg-dark/70 md:bg-dark/60"></div>
-      </div>
-
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start min-h-[500px]">
           <motion.div

@@ -45,18 +45,18 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-100/95 border-b border-neutral-200/80 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#171717]/95 border-b border-white/10 backdrop-blur-md">
       <Container>
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/Logo - Preto.png"
+              src="/Logo - Branco.png"
               alt="Coratri"
               width={420}
               height={150}
               priority
-              className="object-contain h-8 sm:h-9 md:h-10 lg:h-11 w-auto"
+              className="object-contain h-9 sm:h-10 md:h-11 lg:h-12 w-auto"
             />
           </Link>
 
@@ -66,7 +66,7 @@ export function Header() {
                 key={item.href}
                 href={getHref(item.href)}
                 onClick={(e) => handleSectionClick(e, item.href)}
-                className="text-gray-800 hover:text-primary transition-colors font-medium"
+                className="text-[#c0c0c0] hover:text-white transition-colors font-medium"
               >
                 {item.label}
               </Link>
@@ -86,7 +86,7 @@ export function Header() {
           </div>
 
           <button
-            className="lg:hidden text-gray-800 p-2"
+            className="lg:hidden text-white p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -95,7 +95,7 @@ export function Header() {
         </div>
 
         {isMenuOpen && (
-          <nav className="lg:hidden py-4 border-t border-neutral-200/80">
+          <nav className="lg:hidden py-4 border-t border-white/10">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <Link
@@ -105,7 +105,7 @@ export function Header() {
                     handleSectionClick(e, item.href)
                     setIsMenuOpen(false)
                   }}
-                  className="text-gray-800 hover:text-primary transition-colors font-medium py-2"
+                  className="text-[#c0c0c0] hover:text-white transition-colors font-medium py-2"
                 >
                   {item.label}
                 </Link>

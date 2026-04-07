@@ -3,28 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --background: #101010;
+  --background: #171717;
   --foreground: #ffffff;
-  --surface: #181818;
-  --surface-alt: #222222;
-  --muted: #a3a3a3;
-  --muted-foreground: #d4d4d4;
-  --border: #2e2e2e;
-  --inverse: #ffffff;
-  --primary: #1e96de;
-  --primary-hover: #1789cc;
-  --primary-light: #43ace9;
-  --secondary: #0062bc;
-  --secondary-light: #1e96de;
-  --accent: #1e96de;
-  --accent-hover: #0062bc;
-  --accent-start: #00153a;
-  --accent-end: #0062bc;
-  --dark: #101010;
-  --dark-alt: #0b0b0b;
-  --card: #181818;
-  --gray-light: #121212;
-  --gray-lighter: #1b1b1b;
+  --surface: #202020;
+  --surface-alt: #272727;
+  --muted: #a0a0a0;
+  --muted-foreground: #c0c0c0;
+  --border: #2a2a2a;
+  --inverse: #171717;
+  --primary: #ffffff;
+  --primary-hover: #e0e0e0;
+  --primary-light: #c0c0c0;
+  --secondary: #a0a0a0;
+  --secondary-light: #c0c0c0;
+  --accent: #a0a0a0;
+  --accent-hover: #c0c0c0;
+  --accent-start: #171717;
+  --accent-end: #202020;
+  --dark: #171717;
+  --dark-alt: #111111;
+  --card: #202020;
+  --gray-light: #202020;
+  --gray-lighter: #272727;
 }
 
 
@@ -32,6 +32,7 @@
 
 html {
   overflow-x: hidden;
+  background-color: #171717;
 }
 
 body {

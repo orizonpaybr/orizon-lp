@@ -16,7 +16,7 @@ const benefits = [
 
 export function PaymentLinkSection() {
   return (
-    <Section className="py-10 md:py-20 bg-gradient-to-br from-accent-start to-accent-end">
+    <Section className="py-10 md:py-20 bg-background">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -27,7 +27,7 @@ export function PaymentLinkSection() {
             transition={{ duration: 0.6 }}
             className="overflow-hidden"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Link de Pagamento: Vendeu? Recebeu!
             </h2>
 
@@ -35,17 +35,17 @@ export function PaymentLinkSection() {
               {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <HiCheckCircle
-                    className="text-primary flex-shrink-0 mt-1"
+                    className="text-[#a0a0a0] flex-shrink-0 mt-1"
                     size={24}
                   />
-                  <span className="text-muted-foreground text-lg">
+                  <span className="text-[#c0c0c0] text-lg">
                     {benefit}
                   </span>
                 </li>
               ))}
             </ul>
 
-            <p className="text-xl font-semibold text-foreground mb-6">
+            <p className="text-xl font-semibold text-white mb-6">
               Fature mais sem limites. Comece agora!
             </p>
 

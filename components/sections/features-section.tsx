@@ -37,7 +37,7 @@ export function FeaturesSection() {
   return (
     <Section
       id="o-que-fazemos"
-      className="py-10 md:py-20 bg-gradient-to-br from-accent-start to-accent-end"
+      className="py-10 md:py-20 bg-background"
     >
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
@@ -48,10 +48,10 @@ export function FeaturesSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               O que fazemos?
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-[#c0c0c0] text-lg">
               Conectamos sua empresa ao que há de mais moderno em pagamentos:
             </p>
           </motion.div>
@@ -64,13 +64,13 @@ export function FeaturesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-surface rounded-xl p-6 border border-border shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-[#1a1a1a] rounded-xl p-6 border border-[#2a2a2a] shadow-lg hover:bg-[#222222] transition-all"
               >
-                <div className="text-accent mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                <div className="text-[#a0a0a0] mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-muted">{feature.description}</p>
+                <p className="text-[#c0c0c0]">{feature.description}</p>
               </motion.div>
             ))}
           </div>

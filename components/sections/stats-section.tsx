@@ -91,7 +91,7 @@ function CountUp({
 
 export function StatsSection() {
   return (
-    <Section className="py-10 bg-gradient-to-br from-accent-start to-accent-end text-foreground">
+    <Section className="py-10 bg-background">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
           <motion.div
@@ -100,9 +100,9 @@ export function StatsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
               Números que comprovam nossa{' '}
-              <span className="text-accent">força</span>
+              <span className="text-[#a0a0a0]">força</span>
             </h2>
           </motion.div>
 
@@ -133,14 +133,14 @@ export function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-surface-alt/80 backdrop-blur-sm rounded-xl border border-border p-8 hover:bg-surface-alt transition-all"
+              className="bg-[#1a1a1a] rounded-xl border border-[#2a2a2a] p-8 hover:bg-[#222222] transition-all"
             >
               <div className="flex items-start gap-4">
-                <div className="w-16 h-16 bg-inverse rounded-full flex items-center justify-center flex-shrink-0">
-                  <div className="text-dark">{stat.icon}</div>
+                <div className="w-16 h-16 bg-[#a0a0a0] rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="text-[#171717]">{stat.icon}</div>
                 </div>
                 <div className="flex-1">
-                  <p className="text-4xl font-bold text-foreground mb-2">
+                  <p className="text-4xl font-bold text-white mb-2">
                     <CountUp
                       end={stat.value}
                       prefix={stat.prefix}
@@ -148,7 +148,7 @@ export function StatsSection() {
                       duration={2}
                     />
                   </p>
-                  <p className="text-muted-foreground text-lg">{stat.label}</p>
+                  <p className="text-[#c0c0c0] text-lg">{stat.label}</p>
                 </div>
               </div>
             </motion.div>
@@ -162,8 +162,8 @@ export function StatsSection() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <p className="text-xl">
-            <strong className="text-accent">Coratri</strong> A escolha
+          <p className="text-xl text-[#c0c0c0]">
+            <strong className="text-white">Coratri</strong> A escolha
             inteligente para empresas que não podem parar.
           </p>
         </motion.div>
